@@ -17,10 +17,18 @@
     --tipBlueColor: #d9E8FC;
     --grayColorLight: #8792A1;
 }
+/* Fonts Here */
+@font-face {
+    font-family: Huglove;
+    src: url("sources/fonts/Huglove.otf");
+}
+
+
 body{
    background-color: var(--tipBlueColor);
 }
 
+/* Navbar starts here */
 header{
     margin-top: 5rem;
     /* background-color: var(--headerColor);  */
@@ -33,11 +41,12 @@ header{
 
 header span{
     
+    font-family: Huglove;
     font-weight: bold;
     margin-left: 5rem;
     color: var(--blueWaterColor);
     padding: 2rem;
-    font-size: 42px;
+    font-size: 56px;
 }
 
 .items{
@@ -74,3 +83,5 @@ header span{
     background-color: var(--grayColorLight);
     transition: .6s;    
 }
+
+/* Navbar end Here */
