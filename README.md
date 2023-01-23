@@ -4,4 +4,13 @@
 
  Members:
  Ladion, Vince Jeremy T.
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+ Juan, Clyde Zedrick C.
+=======
+ Tabucao, Gabriel A. 
+
+>>>>>>> origin/gabrieltabucs
+>>>>>>> main
