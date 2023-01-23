@@ -11,6 +11,3 @@
  Juan, Clyde Zedrick C.
 =======
  Tabucao, Gabriel A. 
-
->>>>>>> origin/gabrieltabucs
->>>>>>> main
