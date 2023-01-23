@@ -4,4 +4,6 @@
 
  Members:
  Ladion, Vince Jeremy T.
+ Tabucao, Gabriel A. 
  Juan, Clyde Zedrick C.
+
