@@ -4,3 +4,4 @@
 
  Members:
  Ladion, Vince Jeremy T.
+ Juan, Clyde Zedrick C.
