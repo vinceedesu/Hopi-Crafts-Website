@@ -5,6 +5,7 @@
     scroll-behavior: smooth;
 }
 
+/* Color Variable here */
 :root{
     --bgColorDark: #333333;
     --headerColor: #070b09;
@@ -16,7 +17,9 @@
     --skyBlueColor: #7fadeb;
     --tipBlueColor: #d9E8FC;
     --grayColorLight: #8792A1;
+    
 }
+
 /* Fonts Here */
 @font-face {
     font-family: Huglove;
@@ -85,3 +88,17 @@ header span{
 }
 
 /* Navbar end Here */
+
+/* Carousel */
+
+.png-carousel{
+    display: block;
+    margin-top: 200px;
+}
+
+.carousel-img{
+    width: 500px;
+    height: 500px;
+}
+
+/* End of Carousel */
