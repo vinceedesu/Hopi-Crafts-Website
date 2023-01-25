@@ -14,6 +14,7 @@
     /* Color Palette */
     --grayColorDark: #363738;
     --blueWaterColor: #1D64C2;
+    --bleWaterColorTransparent: #1d64c2b9;
     --skyBlueColor: #7fadeb;
     --tipBlueColor: #d9E8FC;
     --grayColorLight: #8792A1;
@@ -33,8 +34,9 @@ body{
 
 /* Navbar starts here */
 header{
-    margin-top: 5rem;
-    /* background-color: var(--headerColor);  */
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: var(--blueWaterColor); 
     align-items: center;
     display: flex;
     position: fixed;
@@ -47,17 +49,9 @@ header span{
     font-family: Huglove;
     font-weight: bold;
     margin-left: 5rem;
-    color: var(--blueWaterColor);
+    color: var(--tipBlueColor);
     padding: 2rem;
-    font-size: 56px;
-}
-
-.items{
-    background-color: var(--blueWaterColor);
-}
-
-.items p{
-    padding:   2rem;
+    font-size: 64px;
 }
 
 .nav-links{
@@ -73,13 +67,15 @@ header span{
 .nav-links li{
     padding: .5rem;
     margin-right: 1rem;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .nav-links li a{
     padding: .5rem;
+    font-size: 18px;
+    font-family: Verdana;
     text-decoration: none;
-    color: var(--blueWaterColor);
+    color: var(--tipBlueColor);
 }
 
 .nav-links li:hover{
@@ -92,13 +88,32 @@ header span{
 /* Carousel */
 
 .png-carousel{
-    display: block;
-    margin-top: 200px;
+    padding-top: 10.6rem;
+    padding-bottom: 1.6rem;
+    text-align: center;
+    background-color: var(--bleWaterColorTransparent);
+    /* border-radius: 1rem; */
+}
+
+.png-carousel h1{
+    font-size: 46px;
+    color: var(--tipBlueColor);
+    font-family: HugLove;
 }
 
 .carousel-img{
+
+    display: flexbox;
+    padding: .4rem;
     width: 500px;
     height: 500px;
+    border-radius: 1rem;
 }
 
 /* End of Carousel */
+
+/* Collections */
+.collections{
+
+}
+/* End of Collections */
