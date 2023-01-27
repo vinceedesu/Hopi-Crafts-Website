@@ -26,12 +26,37 @@
     font-family: Huglove;
     src: url("sources/fonts/Huglove.otf");
 }
+@font-face {
+    font-family: kids;
+    src: url("sources/fonts/cChildrenKids.ttf");
+}
 
+@font-face {
+    font-family: Hugies;
+    src: url("sources/fonts/Hugamour.ttf");
+}
+
+@font-face {
+    font-family: smile;
+    src: url("sources/fonts/Violet Smile.ttf");
+}
+@font-face {
+    font-family: vanilla;
+    src: url("sources/fonts/Vanilla Caramel.otf");
+}
 
 body{
    background-color: var(--tipBlueColor);
 }
 
+h1{
+    font-family: Hugies;
+}
+p{
+    font-family: smile;
+    font-size: 24px;
+    color: var(--grayColorDark);
+}
 /* Navbar starts here */
 header{
     padding-top: 1.5rem;
@@ -88,17 +113,19 @@ header span{
 /* Carousel */
 
 .png-carousel{
-    padding-top: 10.6rem;
-    padding-bottom: 1.6rem;
+    padding-top: 11.6rem;
+    padding-bottom: 6.6rem;
     text-align: center;
     background-color: var(--bleWaterColorTransparent);
     /* border-radius: 1rem; */
 }
-
+.png-carousel p{
+    padding: .6rem;
+}
 .png-carousel h1{
-    font-size: 46px;
+    font-size: 76px;
     color: var(--tipBlueColor);
-    font-family: HugLove;
+    /* font-family: HugLove; */
 }
 
 .carousel-img{
@@ -110,10 +137,61 @@ header span{
     border-radius: 1rem;
 }
 
+.carousel-img:hover{
+    cursor: pointer;
+}
 /* End of Carousel */
 
 /* Collections */
 .collections{
+    width: 100%;
+    text-align: center;
+    padding-top:9.6rem ;
+    padding-bottom: 7.6rem;
+    background-color: var(--grayColorDark);
+}
 
+.collections h1{
+    font-family: HugLove;
+    padding-bottom: .6rem;
+    font-size: 76px;
+    color: var(--blueWaterColor);
+}
+
+.collections p{
+    padding: .7rem;
+    color: var(--tipBlueColor);
 }
 /* End of Collections */
+
+
+/* Start of Shop */
+
+/* End of Shop */
+
+/* Start of Commission */
+
+/* End of Commission */
+
+/* Start of About Us */
+
+/* End of About Us */
+
+/* Footer */
+footer{
+    padding: .5rem;
+    background-color: var(--bgColorDark);
+    font-family: vanilla;
+    font-size: 24px;
+    color: var(--tipBlueColor);
+    text-align: center;
+}
+
+.social-links img{
+    width: 35px;
+    height: 35px;
+    padding: 3px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+/* End of Footer */
