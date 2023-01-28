@@ -166,7 +166,37 @@ header span{
 
 
 /* Start of Shop */
+.shop{
+    padding-top: 9.6rem ;
+    padding-bottom: 7.6rem;
+}
 
+.shop h1{
+    font-size: 96px;
+    align-self: flex-end;
+}
+
+.shop-img {
+    padding-bottom: 0px;
+    width: 340px;
+    height: 340px;
+    
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    background-color: var(--skyBlueColor);
+    border-radius: 3px;
+    margin: 1rem;
+
+}
+button a{
+    font-size: 32px;
+    padding: 32px;
+    text-decoration: none;
+    color: var(--blueWaterColor);
+}
 /* End of Shop */
 
 /* Start of Commission */
@@ -178,6 +208,7 @@ header span{
 /* End of About Us */
 
 /* Footer */
+
 footer{
     padding: .5rem;
     background-color: var(--bgColorDark);
