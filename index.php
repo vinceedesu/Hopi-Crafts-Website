@@ -22,46 +22,59 @@
                     <li><a href="#collections">Collections</a></li>
                     <li><a href="#shop">Shop</a></li>
                     <li><a href="#commission">Commission</a></li>
-                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#about-us">About Us</a></li>
                     <li><a href="#signIn">Sign In</a></li>
 
                 </ul>
             </div>
         </header>
+            <div class="png-carousel" id="home">
+                <h1>< Art Collection for the Month ></h1>
+                <p>They made the Art for the month for a reason</p>
+                <img class="carousel-img" src="sources/img/Chibi Art/Base 11_20220717232125(1).png" alt="#">
+                <img class="carousel-img" src="sources/img/Chibi Art/Base11-001_20220726033356(1).png" alt="#">
+                <img class="carousel-img" src="sources/img/Chibi Art/Base11-001_20220726033439(1).png" alt="#">
+            </div>
+
+            
+            <div class="collections" id="collections">
+                <h1>< Collections ></h1>
+                <p>Explore our Wide Variety of Art Collections</p>
+                <img class="carousel-img" src="sources/img/Line Art/Untitled19_20211219222934.png" alt="#">
+                <img class="carousel-img" src="sources\img\Crafts\IMG20230105031819.jpg" alt="#">
+                <img class="carousel-img" src="sources/img/Chibi Art/Chibi OC 2_20220718014643(2).png" alt="#">
+    
+            </div>
+            
+            <div class="shop" id="shop">
+                <h1>< Shop ></h1>
+                <p>Order your art and it will be delivered in your front door</p>
+                <img class="shop-img" src="sources\img\Line Art\Untitled31_20220421025406.png" alt="#"><br>
+                <a href="shop.html"><button class="click">Visit Shop</button></a>
+            </div>
+
+
+            <div class="commission" id="commission">
+                <h1>Check out what we offer!!!</h1>
+                <p>Custom made arts or crafts tinker in your liking</p>
+
+            </div>
         
-        <div class="png-carousel" id="home">
-            <h1>Art Collection for the Month</h1>
-            <img class="carousel-img" src="sources/img/Chibi Art/Base 11_20220717232125(1).png" alt="#">
-            <img class="carousel-img" src="sources/img/Chibi Art/Base11-001_20220726033356(1).png" alt="#">
-            <img class="carousel-img" src="sources/img/Chibi Art/Base11-001_20220726033439(1).png" alt="#">
-            <!-- <img class="carousel-img" src="sources/img/Chibi Art/Base 11_20220717231344.png" alt="#">
-            <img class="carousel-img" src="sources/img/Chibi Art/Base 11_20220717231344.png" alt="#">
-            <img class="carousel-img" src="sources/img/Chibi Art/Base 11_20220717231344.png" alt="#"> -->
-        </div>
+            <div class="about-us" id="about-us">
+                <h1>About Hopi Crafts</h1>
+            </div>
 
-        <div class="collections" id="collections">
-            <h1>Collections</h1>
-            <p>Here are some of my works</p>
-        </div>
-
-        <div class="shop">
-            <h1>Shop</h1>
-            <p>Order your art and it will be delivered in your front door</p>
-        </div>
-
-        <div class="commission">
-            <h1>Check out what we offer!!!</h1>
-            <p>Custom made arts or crafts tinker in your liking</p>
-
+            <footer>
+                Follow our Socials 
+                <br>
+                <a class="social-links" href="https://www.facebook.com/hopistthpn?mibextid=ZbWKwL"><img src="sources\UI\Fb.png" alt=""></a> 
+                <a class="social-links" href="https://www.instagram.com/siencollections.ph/?fbclid=IwAR0bEWjkYTR4nRTim48lXeK_RkkiWl8Q0DQBJRRM35hLGG-Oh3gSlljScIs"><img src="sources\UI\instagram.png" alt=""></a> 
+                <a class="social-links" href="https://www.facebook.com/hopistthpn?mibextid=ZbWKwL"><img src="sources\UI\twitter.png" alt=""></a> 
+                <a class="social-links" href="https://www.facebook.com/hopistthpn?mibextid=ZbWKwL"><img src="sources\UI\gmail.png" alt=""></a> 
+                <br>
+                &copy; Hopi Crafts 2023
+            </footer>
         </div>
     
-        <div class="FAQ">
-            <h1>About Hopi Crafts</h1>
-        </div>
-
-        <footer>
-            
-        </footer>
-    </div>
 </body>
 </html>
