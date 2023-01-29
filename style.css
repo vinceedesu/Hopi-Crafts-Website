@@ -167,7 +167,7 @@ header span{
 
 /* Start of Shop */
 .shop{
-    padding-top: 9.6rem ;
+    padding-top: 10.6rem ;
     padding-bottom: 7.6rem;
     background-color: var(--skyBlueColor);
     display: flex;
@@ -186,11 +186,13 @@ header span{
 }
 .shop h1{
     color: var(--tipBlueColor);
+    padding: 1.75;
 }
 
 .shop p{
     color: var(--bgColorDark);
     font-size: 42px;
+    padding: 1.75rem;
 }
 button{
     cursor: pointer;
@@ -214,14 +216,21 @@ button:hover{
 
 .column{
     flex: 1;
+    width: 100%;
 }
 
 .left{
+
     text-align: center;
+    margin-left: 5.6rem;
+    margin: 5.6rem;
 }
 
 .right{
+    width: 40%;
     text-align: center;
+    margin-left: 3.6rem;
+    margin: 3.6rem;
 }
 /* End of Shop */
 
