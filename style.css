@@ -113,6 +113,7 @@ header span{
 /* Carousel */
 
 .png-carousel{
+    height: 100vh;
     padding-top: 11.6rem;
     padding-bottom: 6.6rem;
     text-align: center;
@@ -145,6 +146,7 @@ header span{
 /* Collections */
 .collections{
     width: 100%;
+    height: 100vh;
     text-align: center;
     padding-top:9.6rem ;
     padding-bottom: 7.6rem;
@@ -167,6 +169,7 @@ header span{
 
 /* Start of Shop */
 .shop{
+    height: 100vh;
     padding-top: 10.6rem ;
     padding-bottom: 7.6rem;
     background-color: var(--skyBlueColor);
@@ -261,3 +264,12 @@ footer{
     padding-bottom: 6px;
 }
 /* End of Footer */
+
+/* Media Queries */
+
+@media only screen and (max-width:600px) {
+    .column{
+        flex: 100%;
+    }
+    
+}
