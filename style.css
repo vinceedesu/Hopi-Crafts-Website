@@ -170,10 +170,11 @@ header span{
     padding-top: 9.6rem ;
     padding-bottom: 7.6rem;
     background-color: var(--skyBlueColor);
+    display: flex;
 }
 
 .shop h1{
-    font-size: 96px;
+    font-size: 128px;
     align-self: flex-end;
 }
 
@@ -189,6 +190,7 @@ header span{
 
 .shop p{
     color: var(--bgColorDark);
+    font-size: 42px;
 }
 button{
     cursor: pointer;
@@ -208,10 +210,19 @@ button{
 button:hover{
     background-color: var(--blueWaterColor);
     color: var(--tipBlueColor);
-    
-
 }
 
+.column{
+    flex: 1;
+}
+
+.left{
+    text-align: center;
+}
+
+.right{
+    text-align: center;
+}
 /* End of Shop */
 
 /* Start of Commission */
