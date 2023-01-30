@@ -230,7 +230,7 @@ button:hover{
 }
 
 .right{
-    width: 40%;
+    /* width: 40%; */
     text-align: center;
     margin-left: 3.6rem;
     margin: 3.6rem;
@@ -242,6 +242,42 @@ button:hover{
 /* End of Commission */
 
 /* Start of About Us */
+.about-us{
+    
+    height: 100vh;
+    padding-top: 10.6rem ;
+    padding-bottom: 7.6rem;
+    background-color: var(--grayColorLight);
+    display: flex;
+    text-align: center;
+}
+
+.about-us img{
+
+    width: 550px;
+    height: 550px;
+    border-radius: 7px;
+}
+
+.about-us h1{
+
+    font-size: 88px;
+    color: var(--tipBlueColor);
+}
+
+.to-left{
+
+    text-align: center;
+    margin-left: 3.6rem;
+    margin: 3.6rem;
+}
+
+.to-right{
+    /* width: 40%; */
+    text-align: center;
+    margin-right: 3.6rem;
+    margin: 3.6rem;
+}
 
 /* End of About Us */
 
