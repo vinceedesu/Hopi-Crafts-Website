@@ -19,7 +19,7 @@
     <div class="logo"><span>Hopi Crafts</span></div>
     <div class="nav-links"> 
         <ul>
-            <li><a href="../../index.html">Back</a></li>
+            <li><a href="../../index.php">Back</a></li>
 
         </ul>
     </div>
@@ -30,12 +30,13 @@
         <p>Enter your username and password</p>
     </div>
     <form action="login.php" method="post">
-      <input type="text" id="username" name="username" placeholder="username">
+      <input type="text" id="username" name="username" placeholder="Username/Email">
       <br>
-      <input type="password" id="password" name="password" placeholder="password">
+      <input type="password" id="password" name="password" placeholder="Password">
       <br>
-      <a href="register.html">Register</a>
-      <input type="submit" value="submit">
+      <a href="sign-up.php">Register</a>
+      <!-- <button type="submit" name="submit">Sign Up</button> -->
+      <input type="submit" name="submit" value="Sign In">
     </form>
   </div>
 </body>

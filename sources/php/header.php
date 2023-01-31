@@ -23,8 +23,7 @@
                     <li><a href="#shop">Shop</a></li>
                     <!-- <li><a href="#commission">Commission</a></li> -->
                     <li><a href="#about-us">About Us</a></li>
-                    <li><a href="sources\html\login.html">Sign In</a></li>
-
+                    <li><a href="sources\php\login.php">Sign In</a></li>
                 </ul>
             </div>
         </header>
