@@ -1,5 +1,9 @@
 <!-- PHP code here -->
-
+<?php
+  $username = "";
+  $password = "";
+  $email= "";
+?>
 <!-- html -->
 <!DOCTYPE html>
 <html lang="en">
@@ -11,11 +15,7 @@
     <title>Sign In</title>
 </head>
 <body>
-  <?php
-    $username = "";
-    $password = "";
-    $email= "";
-  ?>
+
   <header>
     <div class="logo"><span>Hopi Crafts</span></div>
     <div class="nav-links"> 
@@ -31,11 +31,11 @@
         <p>Enter your username and password</p>
     </div>
     <form action="login.php" method="post">
-      <input type="text" id="username" name="username" placeholder="username">
+      <input type="text" id="username" name="username" placeholder="Username/Email">
       <br>
-      <input type="password" id="password" name="password" placeholder="password">
+      <input type="password" id="password" name="password" placeholder="Password">
       <br>
-      <a href="register.html">Register</a>
+      <a href="../php/sign-up.php">Register</a>
       <input type="submit" value="submit">
     </form>
   </div>
