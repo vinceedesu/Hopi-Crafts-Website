@@ -1,9 +1,3 @@
-  <?php
-    $Username = "";
-    $Password = "";
-    $Email= "";
-  ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

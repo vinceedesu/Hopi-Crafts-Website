@@ -1,6 +1,32 @@
-<?php
-include_once 'sources\php\header.php';
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hopi Crafts</title>
+    <script src="script.js"></script> 
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+    <div class="main">
+        <header>
+            <div class="logo"><span>Hopi Crafts</span></div>
+            <div class="nav-links"> 
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <!-- <li><a href="#commission">Commission</a></li> -->
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="sources\php\login.php">Sign In</a></li>
+                </ul>
+            </div>
+        </header>
             <div class="png-carousel" id="home">
                 <h1>< Art Collection for the Month ></h1>
                 <p>They made the Art for the month for a reason</p>
@@ -46,6 +72,17 @@ include_once 'sources\php\header.php';
                 </div>
             </div>
 
-<?php
-    include_once 'sources\php\footer.php';
-?>
+            <footer>
+                Follow our Socials 
+                <br>
+                <a class="social-links" href="https://www.facebook.com/hopistthpn?mibextid=ZbWKwL"><img src="sources\UI\Fb.png" alt=""></a> 
+                <a class="social-links" href="https://www.instagram.com/siencollections.ph/?fbclid=IwAR0bEWjkYTR4nRTim48lXeK_RkkiWl8Q0DQBJRRM35hLGG-Oh3gSlljScIs"><img src="sources\UI\instagram.png" alt=""></a> 
+                <a class="social-links" href="https://www.facebook.com/hopistthpn?mibextid=ZbWKwL"><img src="sources\UI\twitter.png" alt=""></a> 
+                <a class="social-links" href="https://www.facebook.com/hopistthpn?mibextid=ZbWKwL"><img src="sources\UI\gmail.png" alt=""></a> 
+                <br>
+                &copy; Hopi Crafts 2023
+            </footer>
+        </div>
+    
+</body>
+</html>

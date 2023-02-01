@@ -99,5 +99,3 @@ function createUser($conn, $username, $email, $name, $password){
 
 
 }
-
-?>
