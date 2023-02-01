@@ -1,5 +1,6 @@
 <?php
 
+
 if(isset($_POST["submit"])){
 
     $name = $_POST["name"];
@@ -35,7 +36,7 @@ if(isset($_POST["submit"])){
         header("location: ../php/sign-up.php>?error=passwordsdontmatch");
         exit();
     }
-    if(uidExist($conn, $username) !== false){
+    if(uidExist($conn, $username, $email) !== false){
 
         header("location: ../php/sign-up.php>?error=usernametaken");
         exit();
