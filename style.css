@@ -312,20 +312,6 @@ footer{
     margin-left: 30%;
 }
 
-.logIn button{
-    cursor: pointer;
-    background-color: var(--tipBlueColor);
-    padding: 10px 25px;
-    border: none;
-    border-radius: 18px;
-    margin: 1rem;
-    border: 3px solid transparent;
-    font-weight: 600;
-    color:var(--blueWaterColor);    
-    font-size: 28px;
-    font-family: Arial;
-}
-
 input{
     margin: 7px 0px;
 }
@@ -347,7 +333,7 @@ input[type=password]{
     box-sizing: border-box;
 }
 
-input[type=button], input[type=submit], input[type=reset] {
+/* input[type=button], input[type=submit], input[type=reset] {
     float: right;
     background-color: #0f0f0f;
     border-radius: 25px;
@@ -357,7 +343,7 @@ input[type=button], input[type=submit], input[type=reset] {
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
-  }
+  } */
 
 /* ==================End of Login html====================== */
 

@@ -1,7 +1,7 @@
   <?php
-    $username = "";
-    $password = "";
-    $email= "";
+    $Username = "";
+    $Password = "";
+    $Email= "";
   ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
 </head>
 <body>
 
-  <header>
+<header>
     <div class="logo"><span>Hopi Crafts</span></div>
     <div class="nav-links"> 
         <ul>
@@ -24,20 +24,20 @@
         </ul>
     </div>
 </header>
-<div class="logIn">
-    <div class="text-content">
-        <h1>Sign In</h1>
-        <p>Enter your username and password</p>
-    </div>
-    <form action="login.php" method="post">
-      <input type="text" id="username" name="username" placeholder="Username/Email">
-      <br>
-      <input type="password" id="password" name="password" placeholder="Password">
-      <br>
-      <a href="sign-up.php">Register</a>
-      <!-- <button type="submit" name="submit">Sign Up</button> -->
-      <input type="submit" name="submit" value="Sign In">
-    </form>
-  </div>
+  <div class="logIn">
+      <div class="text-content">
+          <h1>Sign In</h1>
+          <p>Enter your username and password</p>
+      </div>
+      <form action="login.php" method="post">
+        <input type="text" id="username" name="username" placeholder="Username/Email">
+        <br>
+        <input type="password" id="password" name="password" placeholder="Password">
+        <br>
+        <a href="sign-up.php">Sign Up</a>
+        <!-- <button type="submit" name="submit">Sign Up</button> -->
+        <input type="submit" name="submit" value="Sign In">
+      </form>
+</div>
 </body>
 </html>
