@@ -310,6 +310,8 @@ footer{
     width: 33%;
     height: 100vh;
     margin-left: 30%;
+    display: block;
+    text-align: center;
 }
 
 input{
@@ -329,10 +331,26 @@ input[type=email]{
 }
 input[type=password]{
     width:75%;
-    height: 25px;
+    height: 25px;   
     box-sizing: border-box;
 }
 
+.fiil-up a{
+    font-size: 1px;
+}
+.fillButton{
+    font-size: 18px;
+    font-family: Arial;
+    color: var(--tipBlueColor);
+    border: var(--blueWaterColor);
+    background-color: var(--grayColorDark);
+    border-radius: 12px;
+}
+
+.fillButton:hover{
+    color: var(--skyBlueColor);
+    transition: 0s;
+}
 /* input[type=button], input[type=submit], input[type=reset] {
     float: right;
     background-color: #0f0f0f;
@@ -343,7 +361,7 @@ input[type=password]{
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
-  } */
+  } */ 
 
 /* ==================End of Login html====================== */
 

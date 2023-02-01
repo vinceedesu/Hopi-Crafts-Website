@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../css/no-scroll.css">
     <title>Sign Up</title>
 </head>
 <body>
@@ -20,6 +21,7 @@
         <div class="logIn">
             <div class="text-content">
                 <h1>Sign Up</h1>
+                <p>Fill up the form</p>
             </div>
             <section class="signUp-form">
                 <form action="signup-inc.php" method="post">
@@ -31,7 +33,7 @@
                 <br>
                 <input type="password" id="passwordRepeat" name="passwordRepeat" placeholder="Repeate password...">
                 <br>
-                <input type="submit" value="submit">
+                <button class="fillButton" type="submit" name="submit">Sign Up</button>
                 </form>
             </section>
         </div>
