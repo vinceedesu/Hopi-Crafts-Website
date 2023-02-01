@@ -24,7 +24,7 @@
                 <p>Fill up the form</p>
             </div>
             <section class="signUp-form">
-                <form action="../includes/signup-inc.php" method="post">
+                <form action="../includes/signup.inc.php" method="post">
                 <input type="text" id="name" name="name" placeholder="Full Name...">
                 <br>
                 <input type="text" id="username" name="uid" placeholder="Username...">
@@ -33,7 +33,7 @@
                 <br>
                 <input type="password" id="password" name="password" placeholder="Password...">
                 <br>
-                <input type="password" id="passwordRepeat" name="passwordRepeat" placeholder="Repeate password...">
+                <input type="password" id="passwordRepeat" name="passwordRepeat" placeholder="Repeat password...">
                 <br>
                 <button class="fillButton" type="submit" name="submit">Sign Up</button>
                 </form>

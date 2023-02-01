@@ -30,7 +30,7 @@
           <h1>Sign In</h1>
           <p>Enter your username and password</p>
       </div>
-      <form class="fill-up" action="../includes/signup-inc.php" method="post">
+      <form class="fill-up" action="../includes/signup.inc.php" method="post">
         <input type="text" id="username" name="username" placeholder="Username/Email">
         <br>
         <input type="password" id="password" name="password" placeholder="Password">
