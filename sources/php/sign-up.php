@@ -24,7 +24,9 @@
                 <p>Fill up the form</p>
             </div>
             <section class="signUp-form">
-                <form action="signup-inc.php" method="post">
+                <form action="../includes/signup-inc.php" method="post">
+                <input type="text" id="name" name="name" placeholder="Full Name...">
+                <br>
                 <input type="text" id="username" name="uid" placeholder="Username...">
                 <br>
                 <input type="email" id="email" name="email" placeholder="Email...">
