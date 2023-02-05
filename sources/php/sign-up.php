@@ -21,10 +21,10 @@
         <div class="logIn">
             <div class="text-content">
                 <h1>Sign Up</h1>
-                <p>Fill up the form</p>
+                <p>Fill up the form wewe</p>
             </div>
             <section class="signUp-form">
-                <form action="../../dbh-inc.php" method="post" novalidate>
+                <form action="../includes/signup.inc.php" method="post" novalidate>
                 <input type="text" id="name" name="name" placeholder="Full Name...">
                 <br>
                 <input type="text" id="username" name="uid" placeholder="Username...">
