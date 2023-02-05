@@ -24,7 +24,7 @@
                 <p>Fill up the form</p>
             </div>
             <section class="signUp-form">
-                <form action="../includes/signup.inc.php" method="post" novalidate>
+                <form action="../../dbh-inc.php" method="post" novalidate>
                 <input type="text" id="name" name="name" placeholder="Full Name...">
                 <br>
                 <input type="text" id="username" name="uid" placeholder="Username...">
@@ -39,38 +39,7 @@
                 </form>
 
             <?php 
-            if(isset($_GET["error"])){
-                if($_GET["error"] == "emptyinput"){
-                echo "<p>Fill in all fields</p>";
-                }
-                else if($_GET["error"] == "invalidUid")
-                {
-                echo "<p>Choose a proper Username</p>";
-                }
-                
-                else if($_GET["error"] == "invalidemail")
-                {
-                echo "<p>Choose a proper Email</p>";
-                }
-                
-                else if($_GET["error"] == "passwordsdontmatch")
-                {
-                echo "<p>Password mismatch</p>";
-                }
-                else if($_GET["error"] == "stmtfailed")
-                {
-                echo "<p>Something went wrong, try again!</p>";
-                }
-                else if($_GET["error"] == "usernametaken")
-                {
-                echo "<p>Username already taken</p>";
-                }
-                else if($_GET["error"] == "none")
-                {
-                echo "<p>You have sign up</p>";
-                }
-
-            }
+          
         ?>
             </section>
         </div>

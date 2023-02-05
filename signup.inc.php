@@ -33,7 +33,7 @@ if($_POST["pwd"] !== $_POST["pwd2"]){
 
 $password_hash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
-$mysqli = require __DIR__ . "sources\includes\dbh-inc.php";
+$mysqli = require  __DIR__ . "/dbh-inc.php";
 
 print_r($_POST);
 var_dump($password_hash);
