@@ -1,52 +1,39 @@
 <?php
 
-
-if(isset($_POST["submit"])){
-
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $username = $_POST["uid"];
-    $password = $_POST["password"];
-    $passwordRepeat = $_POST["passwordRepeat"];
-
-    require_once 'dbh.inc.php';
-    require_once 'functions.inc.php';
-
-    if(emptyInputSignUp($name, $email,$password, $username, $passwordRepeat) !== false){
-
-        header("location: ../php/sign-up.php>?error=emptyinput");
-        exit();
-    }
-
-    
-    if(invalidUid($username) !== false){
-
-        header("location: ../php/sign-up.php>?error=invaliduid");
-        exit();
-    }
-
-    
-    if(invalidEmail($email) !== false){
-
-        header("location: ../php/sign-up.php>?error=invalidemail");
-        exit();
-    }
-    if(passwordMatch($password, $passwordRepeat) !== false){
-
-        header("location: ../php/sign-up.php>?error=passwordsdontmatch");
-        exit();
-    }
-    if(uidExist($conn, $username, $email) !== false){
-
-        header("location: ../php/sign-up.php>?error=usernametaken");
-        exit();
-    }
-
-    createUser($conn, $name,$email,$password, $username);
-    
+if(empty($_POST["name"])){
+    die("Name is required");
 }
 
-else{
-    header("location: ../php/sign-up.php");
-    exit();
+if(empty($_POST["uid"])){
+    die("Username is required");
 }
+
+if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
+
+    die("Valid email required");
+}
+
+if(strlen($_POST["pwd"]) < 8){
+    die("Password must be atleasr 8 characters");
+}
+// must  contain letter
+if(!preg_match("/[a-z]/i",$_POST["pwd"])){
+
+    die("Password must contain atleast 1 letter");
+}
+// must contain number
+if(!preg_match("/[0-9]/i",$_POST["pwd"])){
+
+    die("Password must contain atleast 1 number");
+}
+
+if($_POST["pwd"] !== $_POST["pwd2"]){
+    die("Password must match");
+}
+
+$password_hash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
+
+$mysqli = require __DIR__ . "sources\includes\dbh-inc.php";
+
+print_r($_POST);
+var_dump($password_hash);
