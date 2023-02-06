@@ -1,11 +1,11 @@
 <?php
 
 $host = "localhost";
-$dbname = "hopicraftdb";
+$dbname = "hopicraft-db";
 $username = "root";
 $password = "";
 
-$mysqli = new mysqli(hostname: $host,
+$mysqli = mysqli_connect(hostname: $host,
                     username: $username,
                     password: $password, 
                     database: $dbname);

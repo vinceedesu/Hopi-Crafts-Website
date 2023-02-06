@@ -31,7 +31,6 @@
         <br>
         <a href="sign-up.php">Sign Up</a>
         <button class="fillButton" type="submit" name="submit">Sign In</button>
-        <!-- <input type="button" name="submit" value="Sign In"> -->
       </form>
 </div>
 </body>

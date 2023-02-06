@@ -21,7 +21,7 @@
         <div class="logIn">
             <div class="text-content">
                 <h1>Sign Up</h1>
-                <p>Fill up the form wewe</p>
+                <p>Fill up the form</p>
             </div>
             <section class="signUp-form">
                 <form action="../includes/signup.inc.php" method="post" novalidate>
@@ -35,7 +35,7 @@
                 <br>
                 <input type="password" id="pwd2" name="pwd2" placeholder="Repeat password...">
                 <br>
-                <button class="fillButton" type="submit" name="submit">Sign Up</button>
+                <button class="fillButton">Sign Up</button>
                 </form>
 
             <?php 

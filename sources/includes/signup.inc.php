@@ -1,54 +1,51 @@
 <?php
 
-if(empty($_POST["name"])){
+if (empty($_POST["name"])) {
     die("Name is required");
 }
 
-if(empty($_POST["uid"])){
-    die("Username is required");
+if (empty($_POST["uid"])) {
+    die("uid is required");
 }
 
-if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
-
-    die("Valid email required");
+if ( ! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+    die("Valid email is required");
 }
 
-if(strlen($_POST["pwd"]) < 8){
-    die("Password must be atleasr 8 characters");
-}
-// must  contain letter
-if(!preg_match("/[a-z]/i",$_POST["pwd"])){
-
-    die("Password must contain atleast 1 letter");
-}
-// must contain number
-if(!preg_match("/[0-9]/i",$_POST["pwd"])){
-
-    die("Password must contain atleast 1 number");
+if (strlen($_POST["pwd"]) < 8) {
+    die("Password must be at least 8 characters");
 }
 
-if($_POST["pwd"] !== $_POST["pwd2"]){
-    die("Password must match");
+if ( ! preg_match("/[a-z]/i", $_POST["pwd"])) {
+    die("Password must contain at least one letter");
+}
+
+if ( ! preg_match("/[0-9]/", $_POST["pwd"])) {
+    die("Password must contain at least one number");
+}
+
+if ($_POST["pwd"] !== $_POST["pwd2"]) {
+    die("Passwords must match");
 }
 
 $password_hash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
 
-$mysqli = require  __DIR__ . "/dbh-inc.php";
+print_r($_POST);
+var_dump($password_hash);
 
-$sql = "INSERT INTO users(name, email, password_hash, uid) VALUES(?, ? , ?, ?)";
+$mysqli = require __DIR__ . "/dbh-inc.php";
 
+$sql = "INSERT INTO users (name,uid, email, password_hash)
+        VALUES (?, ?, ?, ?)";
+        
 $stmt = $mysqli->stmt_init();
 
-if(! $stmt->prepare($sql)){
-    die("SQL error: ". $mysqli->error);
+if ( ! $stmt->prepare($sql)) {
+    die("SQL error: " . $mysqli->error);
 }
 
-$stmt->bind_param(
-    "ssss",
-    $_POST["name"],
-    $_POST["email"],
-    $password_hash,
-    $_POST["uid"]
-);
-
-echo "Signup successful";
+$stmt->bind_param("ssss",
+                  $_POST["name"],
+                  $_POST["uid"],
+                  $_POST["email"],
+                  $password_hash);
