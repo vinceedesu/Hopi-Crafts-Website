@@ -35,7 +35,7 @@
                 <br>
                 <input type="password" id="pwd2" name="pwd2" placeholder="Repeat password...">
                 <br>
-                <button class="fillButton">Sign Up</button>
+                <button class="fillButton" type="submit" name="submit">Sign Up</button>
                 </form>
 
             <?php 
