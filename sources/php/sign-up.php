@@ -21,7 +21,7 @@
         <div class="logIn">
             <div class="text-content">
                 <h1>Sign Up</h1>
-                <p>Fill up the form</p>
+                <p>Fill up the formasdasd   </p>
             </div>
             <section class="signUp-form">
                 <form action="../includes/signup.inc.php" method="post" novalidate>
