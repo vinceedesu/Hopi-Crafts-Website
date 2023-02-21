@@ -6,7 +6,7 @@
                 <a class="social-links" href="https://www.facebook.com/hopistthpn?mibextid=ZbWKwL"><img src="sources\UI\twitter.png" alt=""></a> 
                 <a class="social-links" href="https://www.facebook.com/hopistthpn?mibextid=ZbWKwL"><img src="sources\UI\gmail.png" alt=""></a> 
                 <br>
-                &copy; Hopi Crafts 2023
+                Hopi Crafts 2023&copy; 
             </footer>
         </div>
     

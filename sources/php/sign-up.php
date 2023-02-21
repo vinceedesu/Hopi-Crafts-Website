@@ -21,19 +21,19 @@
         <div class="logIn">
             <div class="text-content">
                 <h1>Sign Up</h1>
-                <p>Fill up the formasdasd   </p>
+                <p>Fill up the form</p>
             </div>
             <section class="signUp-form">
                 <form action="../includes/signup.inc.php" method="post" novalidate>
-                <input type="text" id="name" name="name" placeholder="Full Name...">
+                <input type="text" id="name" name="name" placeholder="Full Name">
                 <br>
-                <input type="text" id="username" name="uid" placeholder="Username...">
+                <input type="text" id="username" name="uid" placeholder="Username">
                 <br>
-                <input type="email" id="email" name="email" placeholder="Email...">
+                <input type="email" id="email" name="email" placeholder="Email">
                 <br>
-                <input type="password" id="pwd" name="pwd" placeholder="Password...">
+                <input type="password" id="pwd" name="pwd" placeholder="Password">
                 <br>
-                <input type="password" id="pwd2" name="pwd2" placeholder="Repeat password...">
+                <input type="password" id="pwd2" name="pwd2" placeholder="Repeat password">
                 <br>
                 <button class="fillButton" type="submit" name="submit">Sign Up</button>
                 </form>
