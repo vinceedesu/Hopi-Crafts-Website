@@ -1,45 +1,48 @@
 <?php
 
-if(isset($_POST["submit"])){
-
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $username = $_POST["uid"];
-    $pwd = $_POST["pwd"];
-    $pwd2 = $_POST["pwd2"];
-
-    require_once 'dbh-inc.php';
-    require_once 'functions.inc.php';
-    
-    // if(empytyInputSignup($name, $email, $uid, $pwd, $pwd2) !== false){
-    //     header("location: ../php/sign-up.php?error=emptyinput");
-    //     exit();    
-    // }
-    
-    if(invalidUid($username) !== false){
-        header("location: ../php/sign-up.php?error=invalidUid");
-        exit();    
-    }
-
-    if(invalidEmail($email) !== false){
-        header("location: ../php/sign-up.php?error=invalidemail");
-        exit();    
-    }
-    
-    if(pwdMatch($pwd, $pwd2) !== false){
-        header("location: ../php/sign-up.php?error=passwordmismatch");
-        exit();    
-    }
-
-    if(uidExist($conn, $username, $email) !== false){
-        header("location: ../php/sign-up.php?error=usernametaken");
-        exit();    
-    }
-
-    createUser($conn, $name, $email, $username, $pwd);
+if (empty($_POST["name"])) {
+    die("Name is required");
 }
 
-else{
-    header("location: ../php/sign-up.php");
-    exit();
+if ( ! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+    die("Valid email is required");
 }
+
+if (strlen($_POST["pwd"]) < 6) {
+    die("Password must be at least 6 characters");
+}
+
+if ( ! preg_match("/[a-z]/i", $_POST["pwd"])) {
+    die("Password must contain at least one letter");
+}
+
+if ( ! preg_match("/[0-9]/", $_POST["pwd"])) {
+    die("Password must contain at least one number");
+}
+
+if ($_POST["pwd"] !== $_POST["pwd2"]) {
+    die("Passwords must match");
+}
+
+$password_hash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
+
+$mysqli = require __DIR__ . "/dbh-inc.php";
+
+$sql = "INSERT INTO users (name, email,  password_hash)
+        VALUES (?, ?, ?)";
+        
+$stmt = $mysqli->stmt_init();
+
+if ( ! $stmt->prepare($sql)) {
+    die("SQL error: " . $mysqli->error);
+}
+
+$stmt->bind_param(
+    "sss",
+    $_POST["name"],
+    $_POST["email"],
+    $password_hash
+);
+
+$stmt->execute();
+echo "Signup successful";

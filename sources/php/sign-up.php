@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../css/no-scroll.css">
+    <link rel="icon" type="image/png" href="../img/logo.png" sizes="16x16">
     <title>Sign Up</title>
 </head>
 <body>
@@ -27,17 +28,14 @@
                 <form action="../includes/signup.inc.php" method="post" novalidate>
                 <input type="text" id="name" name="name" placeholder="Full Name">
                 <br>
-                <input type="text" id="username" name="uid" placeholder="Username">
-                <br>
                 <input type="email" id="email" name="email" placeholder="Email">
                 <br>
                 <input type="password" id="pwd" name="pwd" placeholder="Password">
                 <br>
-                <input type="password" id="pwd2" name="pwd2" placeholder="Repeat password">
+                <input type="password" id="pwd2" name="pwd2" placeholder="Repeat Password">
                 <br>
                 <button class="fillButton" type="submit" name="submit">Sign Up</button>
                 </form>
-
             <?php 
           
         ?>

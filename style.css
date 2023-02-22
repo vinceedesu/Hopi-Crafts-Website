@@ -102,7 +102,9 @@ header span{
     text-decoration: none;
     color: var(--tipBlueColor);
 }
-
+.logoPic{
+    padding: 12px;
+}
 .nav-links li:hover{
     background-color: var(--grayColorLight);
     transition: .6s;    

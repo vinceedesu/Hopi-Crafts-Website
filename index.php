@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hopi Crafts</title>
     <script src="script.js"></script> 
+    <link rel="icon" type="image/png" href="sources\img\logo.png" sizes="16x16">
     <link rel="stylesheet" href="style.css">
 
 
@@ -15,6 +16,7 @@
 
     <div class="main">
         <header>
+        
             <div class="logo"><span>Hopi Crafts</span></div>
             <div class="nav-links"> 
                 <ul>
@@ -57,10 +59,11 @@
 
             <div class="about-us" id="about-us">
                 <div class="column to-left">
-                <img src="sources\img\Chibi Art\Chibi OC 2_20220718014235(1).png" alt="#">
+                <img src="sources\img\logo.png" alt="#">
                 </div>
                 <div class="column to-right">
                     <h1>About Hopi Crafts</h1>
+                    <p>Welcome to Hopi Craft Website, where I showcase my passion for art and creativity. I am a dedicated artist who believes in the power of art to transform lives and bring joy to the world. My goal is to inspire others through my artwork and to share my love of art with the world</p>
                 </div>
             </div>
 

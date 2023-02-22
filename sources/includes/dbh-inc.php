@@ -1,17 +1,17 @@
 <?php
 
 $host = "localhost";
-$dbname = "hopicraft-db";
+$dbname = "hopicraftdb";
 $username = "root";
 $password = "";
 
-$conn = mysqli_connect(hostname: $host,
-                    username: $username,
-                    password: $password, 
-                    database: $dbname);
-
-if (!$conn){
-    die("Connection error: " . mysqli_connect_error());
+$mysqli = new mysqli(hostname: $host,
+                     username: $username,
+                     password: $password,
+                     database: $dbname);
+                     
+if ($mysqli->connect_errno) {
+    die("Connection error: " . $mysqli->connect_error);
 }
 
-return $conn;
+return $mysqli;

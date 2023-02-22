@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../css/no-scroll.css">
+    <link rel="icon" type="image/png" href="../img/logo.png" sizes="16x16">
     <title>Sign In</title>
 </head>
 <body>
@@ -15,7 +16,6 @@
     <div class="nav-links"> 
         <ul>
             <li><a href="../../index.php">Back</a></li>
-
         </ul>
     </div>
 </header>
