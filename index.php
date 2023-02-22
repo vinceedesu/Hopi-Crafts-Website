@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hopi Crafts</title>
     <script src="script.js"></script> 
-    <link rel="icon" type="image/png" href="sources\img\logo.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="sources/img/logo.png" sizes="16x16">
     <link rel="stylesheet" href="style.css">
 
 
