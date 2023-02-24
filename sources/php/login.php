@@ -19,13 +19,54 @@
         </ul>
     </div>
 </header>
+
+<?php
+
+$is_invalid = false;
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    
+    $mysqli = require __DIR__ . "/../includes/dbh-inc.php";
+    
+    $sql = sprintf("SELECT * FROM users
+                    WHERE email = '%s'",
+                   $mysqli->real_escape_string($_POST["email"]));
+    
+    $result = $mysqli->query($sql);
+    
+    $users = $result->fetch_assoc();
+    
+    if ($user) {
+        
+        if (password_verify($_POST["password"], $users["password_hash"])) {
+            
+            session_start();
+            
+            session_regenerate_id();
+            
+            $_SESSION["user_id"] = $users["id"];
+            
+            header("Location: index.php?login");
+            exit;
+        }
+    }
+    
+    $is_invalid = true;
+}
+
+?>
   <div class="logIn">
       <div class="text-content">
           <h1>Sign In</h1>
           <p>Enter your username and password</p>
       </div>
-      <form class="fill-up" action="../includes/signup.inc.php" method="post">
-        <input type="text" id="username" name="username" placeholder="Username/Email">
+    
+      <?php if ($is_invalid): ?>
+        <em>Invalid login</em>
+    <?php endif; ?>
+
+      <form class="fill-up" method="post">
+        <input type="text" id="email" name="email" placeholder="Email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
         <br>
         <input type="password" id="password" name="password" placeholder="Password">
         <br>

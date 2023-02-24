@@ -1,7 +1,7 @@
 <?php
 
 if (empty($_POST["name"])) {
-    die("Name is required");
+    die("Name is required"); 
 }
 
 if ( ! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
@@ -44,5 +44,10 @@ $stmt->bind_param(
     $password_hash
 );
 
-$stmt->execute();
-echo "Signup successful";
+if ( ! $stmt->execute()) {
+    header("Location: ../php/signup.php?error=sqlerror");
+}
+else{
+    header("Location: ../php/signup-success.php");
+    exit();
+}
