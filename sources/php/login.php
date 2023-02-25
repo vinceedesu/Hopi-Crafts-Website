@@ -1,3 +1,40 @@
+<?php
+
+@include('../includes/dbh.inc.php');
+
+session_start();
+
+if(isset($_POST['submit'])){
+
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $pass = md5($_POST['pwd']);
+    $pass2 = md5($_POST['pwd2']);
+    $user_type = $_POST['user_type'];
+
+    $select = "SELECT * FROM user_form WHERE email = '$email' && password = '$pass'";
+
+    $result = mysqli_query($conn, $select);
+
+    if(mysqli_num_rows($result) > 0){
+        
+        $row = mysqli_fetch_array($result);
+
+        if($row['user_type'] == 'admin'){
+            $_SESSION['admin_name'] = $row['name'];
+            header("Location: admin-landing.php");
+    }elseif($row['user_type'] == 'user'){
+        $_SESSION['user_name'] = $row['name'];
+        header("Location: user-landing.php");
+    }else{
+        $error[] = 'incorrect email or password';
+    }
+
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,59 +57,27 @@
     </div>
 </header>
 
-<?php
-
-$is_invalid = false;
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    
-    $mysqli = require __DIR__ . "/../includes/dbh-inc.php";
-    
-    $sql = sprintf("SELECT * FROM users
-                    WHERE email = '%s'",
-                   $mysqli->real_escape_string($_POST["email"]));
-    
-    $result = $mysqli->query($sql);
-    
-    $users = $result->fetch_assoc();
-    
-    if ($user) {
-        
-        if (password_verify($_POST["password"], $users["password_hash"])) {
-            
-            session_start();
-            
-            session_regenerate_id();
-            
-            $_SESSION["user_id"] = $users["id"];
-            
-            header("Location: index.php?login");
-            exit;
-        }
-    }
-    
-    $is_invalid = true;
-}
-
-?>
   <div class="logIn">
       <div class="text-content">
           <h1>Sign In</h1>
           <p>Enter your username and password</p>
       </div>
     
-      <?php if ($is_invalid): ?>
-        <em>Invalid login</em>
-    <?php endif; ?>
-
+      <?php
+      if(isset($error)){
+         foreach($error as $error){
+            echo '<span class="error">'.$error.'</span>';
+         };
+      };
+      ?>
       <form class="fill-up" method="post">
         <input type="text" id="email" name="email" placeholder="Email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
         <br>
         <input type="password" id="password" name="password" placeholder="Password">
         <br>
-        <a href="sign-up.php">Sign Up</a>
         <button class="fillButton" type="submit" name="submit">Sign In</button>
-      </form>
+        <p>Don't have an account? <a href="sign-up.php">Sign Up</a></p>
+    </form>
 </div>
 </body>
 </html>

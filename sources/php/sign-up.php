@@ -1,3 +1,37 @@
+<?php
+
+@include '../includes/dbh.inc.php';
+
+if(isset($_POST['submit'])){
+
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $pass = md5($_POST['pwd']);
+    $pass2 = md5($_POST['pwd2']);
+    $user_type = $_POST['user_type'];
+
+    $select = "SELECT * FROM user_form WHERE email = '$email' && password = '$pass'";
+
+    $result = mysqli_query($conn, $select);
+
+    if(mysqli_num_rows($result) > 0){
+        
+        $error[]= "user already exists";
+
+    }else{
+        if($pass != $pass2){
+            $error[] = "passwords do not match";
+
+        }else{
+            $insert = "INSERT INTO user_form (name, email, password, user_type) VALUES ('$name', '$email', '$pass', '$user_type')";
+            mysqli_query($conn, $insert);
+            header("Location: signup-success.php");
+        }
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +48,7 @@
         <div class="logo"><span>Hopi Crafts</span></div>
         <div class="nav-links"> 
             <ul>
-                <li><a href="login.php">Back</a></li>
+                <li><a href="../../index.php">Back</a></li>
     
             </ul>
         </div>
@@ -22,38 +56,32 @@
         <div class="logIn">
             <div class="text-content">
                 <h1>Sign Up</h1>
-                <p>Fill up the form</p>
+                <p>Fill up to create an Account</p>
             </div>
 
-    <?php
-
-            session_start();
-
-            if (isset($_SESSION["user_id"])) {
-                
-                $mysqli = require __DIR__ . "/../includes/dbh-inc.php";
-                
-                $sql = "SELECT * FROM users
-                        WHERE id = {$_SESSION["user_id"]}";
-                        
-                $result = $mysqli->query($sql);
-                
-                $users = $result->fetch_assoc();
-            }
-
-    ?>
-
             <section class="signUp-form">
-                <form action="../includes/signup.inc.php" method="post" novalidate>
-                <input type="text" id="name" name="name" placeholder="Full Name">
+                <form action="" method="post" novalidate>
+                    <?php
+                        if(isset($error)){
+                            foreach($error as $error){
+                                echo '<p class="error">'.$error.'</p>';
+                            }
+                        }
+                    ?>
+                <input type="text" id="name" name="name" placeholder="enter your name">
                 <br>
-                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="email" id="email" name="email" placeholder="enter your email">
                 <br>
-                <input type="password" id="pwd" name="pwd" placeholder="Password">
+                <input type="password" id="pwd" name="pwd" placeholder="enter your password">
                 <br>
-                <input type="password" id="pwd2" name="pwd2" placeholder="Repeat Password">
+                <input type="password" id="pwd2" name="pwd2" placeholder="confirm your password">
                 <br>
+                <select name="user_type" id="user_type">
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
                 <button class="fillButton" type="submit" name="submit">Sign Up</button>
+                <p>Already have an account? <a href="login.php">Log In</a></p>
                 </form>
             <?php 
           

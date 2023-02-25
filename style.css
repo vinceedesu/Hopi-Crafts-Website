@@ -316,6 +316,24 @@ footer{
     text-align: center;
 }
 
+/* .form-container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 60px;
+    background: #eee;
+}
+
+.form-container form{
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px rgb(255, 255, 255);
+    background: #fff;
+    text-align: center;
+
+} */
+
 input{
     margin: 7px 0px;
 }
@@ -352,6 +370,15 @@ input[type=password]{
 .fillButton:hover{
     color: var(--skyBlueColor);
     transition: 0s;
+}
+
+.error{
+    margin: 10px 0;
+    display: block;
+    background: crimson;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
 }
 /* input[type=button], input[type=submit], input[type=reset] {
     float: right;
