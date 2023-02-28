@@ -61,6 +61,7 @@ p{
 header{
     padding-top: .5rem;
     padding-bottom: .5rem;
+    height: 10vh;
     background-color: var(--blueWaterColor); 
     align-items: center;
     display: flex;
