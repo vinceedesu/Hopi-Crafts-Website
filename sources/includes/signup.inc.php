@@ -1,84 +1,68 @@
 <?php
+//database connection
+
+include_once 'dbh-inc.php';
+
+
 // check if the user submitted the form
 if(isset($_POST['submit'])){
 
-    // include the database connection file
-    include_once 'dbh.inc.php';
+    //error messages
+    $error = [];
 
-    // get values from the form
+    //variables
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $pass = md5($_POST['pwd']);
-    $pass2 = md5($_POST['pwd2']);
-    $user_type = '';
+    $pass = $_POST['pwd'];
+    $pass2 = $_POST['pwd2'];
+    $user_type = "user";
 
-    // check if the user already exists
-    $select = "SELECT * FROM user_form WHERE email = '$email' && password = '$pass'";
-
-    $result = mysqli_query($conn, $select);
-
-    if(mysqli_num_rows($result) > 0){
-        $error[]= "user already exists";
-    }else{
-        if($pass != $pass2){
-            $error[] = "passwords do not match";
-        }else{
-            $pass = password_hash($pass, PASSWORD_DEFAULT);
-            $insert = "INSERT INTO user_form (name, email, password, user_type) VALUES ('$name', '$email', '$pass', '$user_type')";
-            mysqli_query($conn, $insert);
-            header("Location: ../php/signup-success.php");
-        }
-    }
-}
-
-// if (empty($_POST["name"])) {
-//     die("Name is required"); 
-// }
-
-// if ( ! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-//     die("Valid email is required");
-// }
-
-// if (strlen($_POST["pwd"]) < 6) {
-//     die("Password must be at least 6 characters");
-// }
-
-// if ( ! preg_match("/[a-z]/i", $_POST["pwd"])) {
-//     die("Password must contain at least one letter");
-// }
-
-// if ( ! preg_match("/[0-9]/", $_POST["pwd"])) {
-//     die("Password must contain at least one number");
-// }
-
-// if ($_POST["pwd"] !== $_POST["pwd2"]) {
-//     die("Passwords must match");
-// }
-
-// $password_hash = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
-
-// $mysqli = require __DIR__ . "/dbh-inc.php";
-
-// $sql = "INSERT INTO users (name, email,  password_hash)
-//         VALUES (?, ?, ?)";
         
-// $stmt = $mysqli->stmt_init();
+    
+    //if fields are empty
+    if(empty($name) || empty($email) || empty($pass) || empty($pass2)){
+        $error[] = "Please fill in all fields";
+        header("Location: ../php/sign-up.php?error=emptyfields");
+    }
 
-// if ( ! $stmt->prepare($sql)) {
-//     die("SQL error: " . $mysqli->error);
-// }
 
-// $stmt->bind_param(
-//     "sss",
-//     $_POST["name"],
-//     $_POST["email"],
-//     $password_hash
-// );
+    //check if email is valid
+    if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+        $error[] = "Please enter a valid email";
+        header("Location: ../php/sign-up.php?error=invalidemail");
+    }
 
-// if ( ! $stmt->execute()) {
-//     header("Location: ../php/signup.php?error=sqlerror");
-// }
-// else{
-//     header("Location: ../php/signup-success.php");
-//     exit();
-// }
+    //check if passwords match
+    if($_POST['pwd'] != $_POST['pwd2']){
+        $error[] = "Passwords do not match";
+        header("Location: ../php/sign-up.php?error=passwordsdontmatch");
+    }
+    //check if password is at least 8 characters
+    // if(strlen($_POST['pwd']) < 6){
+    //     $error[] = "Password is too weak";
+    //     header("Location: ../php/sign-up.php?error=passwordistooweak");
+    // }
+
+    //check if email already exists
+    $sql = "SELECT * FROM user_form WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([$email]);
+    //fetch the row as array
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if($result){
+        $error[] = "Email already exists";
+        header("Location: ../php/sign-up.php?error=emailalreadyexists");
+    }
+    else{
+        //hash password
+        $hashedPwd = password_hash($pass, PASSWORD_DEFAULT);
+
+        //insert user into database
+        $sql = "INSERT INTO user_form (name, email, password, user_type) VALUES (?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([$name, $email, $hashedPwd, $user_type]);
+        header("Location: ../php/signup-success.php");
+    }
+
+}
