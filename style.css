@@ -77,10 +77,10 @@ header span{
     float: left;
     color: var(--tipBlueColor);
     padding: 2rem;
-    font-size: 64px;
+    font-size: 45px;
 }
 .nav-links{
-    margin-right: 7rem;
+    margin-right: 6rem;
     text-align: right;
 }
 
@@ -138,8 +138,8 @@ header span{
 }
 
 .nav-links li a{
-    padding: .5rem;
-    font-size: 18px;
+    padding: .1rem;
+    font-size: 14px;
     font-family: Verdana;
     text-decoration: none;
     color: var(--tipBlueColor);
@@ -416,9 +416,136 @@ input[type=password]{
 
 /* Media Queries */
 
-@media screen and (max-width:600px) {
-
+/*1536*/
+@media screen and (max-width: 1619px) { 
+    .carousel-img{
+        width: 400px;
+        height: 400px;
+    }
     .png-carousel h1{
-        font-size: 12px;
-    }    
+        font-size: 66px;
+        }
+        .png-carousel p{
+            font-size: 22px;
+        }
+    .nav-links {
+        margin-right: 4rem;
+    }
+    .collections h1{
+        font-size: 66px;
+    }
+    .collections p{
+        font-size: 22px;
+    }
+    .shop h1{
+        font-size: 108px;
+    }
+    .shop p{
+        font-size: 37px;
+        padding: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .carousel-img{
+        width: 350px;
+        height: 350px;
+    }
+    .png-carousel h1 {
+        font-size: 56px;
+    }
+    .png-carousel p {
+        font-size: 20px;
+    }
+    .nav-links {
+        margin-right: 2rem;
+    }
+    .collections h1{
+        font-size: 56px;
+    }
+    .collections p{
+        font-size: 20px;
+    }
+    .shop h1{
+        font-size: 88px;
+    }
+    .shop p{
+        font-size: 32px;
+    }
+    .shop-img {
+        width: 390px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .carousel-img{
+        width: 300px;
+        height: 300px;
+    }
+    .png-carousel h1 {
+        font-size: 51px;
+    }
+    .png-carousel p {
+        font-size: 19px;
+    }
+    .nav-links {
+        margin-right: 0rem;
+    }
+    .collections h1{
+        font-size: 51px;
+    }
+    .collections p{
+        font-size: 19px;
+    }
+    .shop h1{
+        font-size: 68px;
+    }
+    .shop p{
+        font-size: 27px;
+        padding: 1.75rem;
+    }
+    .shop-img {
+        width: 340px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .carousel-img{
+        width: 250px;
+        height: 250px;
+    }
+    .png-carousel h1 {
+        font-size: 46px;
+    }
+    .png-carousel p {
+        font-size: 18px;
+    }
+    .collections h1{
+        font-size: 46px;
+    }
+    .collections p{
+        font-size: 18px;
+    }
+    .shop h1{
+        font-size: 48px;
+    }
+    .shop p{
+        font-size: 22px;
+        padding: 1.75rem;
+    }
+    .shop-img {
+        padding-bottom: 2rem;
+        width: 290px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+}
+
+@media screen and (max-width: 575px) {
+    
 }
