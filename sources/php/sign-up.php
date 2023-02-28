@@ -45,6 +45,9 @@
                             else if ($_GET["error"] == "emailalreadyexists") {
                                 echo "<p>Email already exists!</p>";
                             }
+                            else if ($_GET["error"] == "passwordistooweak") {
+                                echo "<p>Password is too weak!</p>";
+                            }
                             else if ($_GET["error"] == "none") {
                                 echo "<p>You have signed up!</p>";
                             }
