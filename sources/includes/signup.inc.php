@@ -11,10 +11,10 @@ if(isset($_POST['submit'])){
     $error = [];
 
     //variables
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $pass = $_POST['pwd'];
-    $pass2 = $_POST['pwd2'];
+    $name = htmlentities($_POST['name']);
+    $email = htmlentities($_POST['email']);
+    $pass = htmlentities($_POST['pwd']);
+    $pass2 = htmlentities($_POST['pwd2']);
     $user_type = "user";
 
         
@@ -37,11 +37,11 @@ if(isset($_POST['submit'])){
         $error[] = "Passwords do not match";
         header("Location: ../php/sign-up.php?error=passwordsdontmatch");
     }
-    //check if password is at least 8 characters
-    // if(strlen($_POST['pwd']) < 6){
-    //     $error[] = "Password is too weak";
-    //     header("Location: ../php/sign-up.php?error=passwordistooweak");
-    // }
+    //check if password is at least 6 characters
+    if(strlen($_POST['pwd']) < 6){
+        $error[] = "Password is too weak";
+        header("Location: ../php/sign-up.php?error=passwordistooweak");
+    }
 
     //check if email already exists
     $sql = "SELECT * FROM user_form WHERE email = ?";

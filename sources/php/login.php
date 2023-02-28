@@ -1,38 +1,5 @@
 <?php
 
-@include('../includes/dbh.inc.php');
-
-session_start();
-
-if(isset($_POST['submit'])){
-
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $pass = md5($_POST['pwd']);
-    $pass2 = md5($_POST['pwd2']);
-    $user_type = $_POST['user_type'];
-
-    $select = "SELECT * FROM user_form WHERE email = '$email' && password = '$pass'";
-
-    $result = mysqli_query($conn, $select);
-
-    if(mysqli_num_rows($result) > 0){
-        
-        $row = mysqli_fetch_array($result);
-
-        if($row['user_type'] == 'admin'){
-            $_SESSION['admin_name'] = $row['name'];
-            header("Location: admin-landing.php");
-    }elseif($row['user_type'] == 'user'){
-        $_SESSION['user_name'] = $row['name'];
-        header("Location: user-landing.php");
-    }else{
-        $error[] = 'incorrect email or password';
-    }
-
-    }
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -64,16 +31,26 @@ if(isset($_POST['submit'])){
       </div>
     
       <?php
-      if(isset($error)){
-         foreach($error as $error){
-            echo '<span class="error">'.$error.'</span>';
-         };
-      };
+
       ?>
-      <form class="fill-up" method="post">
-        <input type="text" id="email" name="email" placeholder="Email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
+      <form class="fill-up"  method="post" action="../includes/signin.inc.php">
+        <?php
+            //error messages
+            if(isset($_GET['error'])){
+                if($_GET['error'] == "emptyfields"){
+                    echo '<p class="error">Please fill in all fields</p>';
+                }
+                else if($_GET['error'] == "wrongpassword"){
+                    echo '<p class="error">Wrong password</p>';
+                }
+                else if($_GET['error'] == "nouser"){
+                    echo '<p class="error">No user found</p>';
+                }
+            }
+        ?>
+        <input type="text" id="email" name="email" placeholder="Email">
         <br>
-        <input type="password" id="password" name="password" placeholder="Password">
+        <input type="password" id="password" name="pwd" placeholder="Password">
         <br>
         <button class="fillButton" type="submit" name="submit">Sign In</button>
         <p>Don't have an account? <a href="sign-up.php">Sign Up</a></p>
