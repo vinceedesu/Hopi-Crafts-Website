@@ -140,9 +140,15 @@ header span{
     border-radius: 1rem;
 }
 
-.carousel-img:hover{
-    cursor: pointer;
+.carousel-button {
+    width: 10;
+    height:10;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    position: relative;
 }
+
 /* End of Carousel */
 
 /* Collections */
