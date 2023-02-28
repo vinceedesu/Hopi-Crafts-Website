@@ -24,7 +24,14 @@
                     <li><a href="#collections">Collections</a></li>
                     <li><a href="#shop">Shop</a></li>
                     <li><a href="#about-us">About Us</a></li>
-                    <li><a href="sources\php\login.php">Profile</a></li>
+                    <li><a href="#">My Profile</a></li>
+                    <ul>
+                        <div class="subMenu">
+                            <li><a href="../user/user-profile.php">User Profile</a></li>
+                            <li><a href="../user/wishlist.php">Wishlist</a></li>
+                            <li><a href="../../index.php">Logout</a></li>
+                        </div>
+                    </ul>
                 </ul>
             </div>
         </header>

@@ -30,26 +30,26 @@
                     <?php
                         // Check if there is any error message
                         if (isset($_GET["error"])) {
-                            if ($_GET["error"] == "emptyinput") {
-                                echo "<p>Fill in all fields!</p>";
+                            if ($_GET["error"] == "emptyfields") {
+                                echo '<p class="error">Fill in all fields!</p>';
                             }
                             else if ($_GET["error"] == "invalidemail") {
-                                echo "<p>Choose a proper email!</p>";
+                                echo '<p class="error">Choose a proper email!</p>';
                             }
                             else if ($_GET["error"] == "passwordsdontmatch") {
-                                echo "<p>Passwords don't match!</p>";
+                                echo '<p class="error">Passwords do not match!</p>';
                             }
                             else if ($_GET["error"] == "stmtfailed") {
-                                echo "<p>Something went wrong, try again!</p>";
+                                echo '<p class="error">Something went wrong, try again!</p>';
                             }
                             else if ($_GET["error"] == "emailalreadyexists") {
-                                echo "<p>Email already exists!</p>";
+                                echo '<p class="error">Email already exists!</p>';
                             }
                             else if ($_GET["error"] == "passwordistooweak") {
-                                echo "<p>Password is too weak!</p>";
+                                echo '<p class="error">Password is too weak!</p>';
                             }
                             else if ($_GET["error"] == "none") {
-                                echo "<p>You have signed up!</p>";
+                                echo '<p class="error">You have signed up!</p>';
                             }
                         }
                     ?>
@@ -61,10 +61,6 @@
                 <br>
                 <input type="password" id="pwd2" name="pwd2" placeholder="confirm your password">
                 <br>
-                <!-- <select name="user_type" id="user_type">
-                    <option value="user">User</option>
-                    <option value="admin">Admin</option>
-                </select> -->
                 <button class="fillButton" type="submit" name="submit">Sign Up</button>
                 <p>Already have an account? <a href="login.php">Log In</a></p>
                 </form>
