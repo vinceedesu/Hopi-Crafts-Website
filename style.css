@@ -59,8 +59,9 @@ p{
 }
 /* Navbar starts here */
 header{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    height: 10vh;
     background-color: var(--blueWaterColor); 
     align-items: center;
     display: flex;
@@ -70,16 +71,57 @@ header{
 }
 
 header span{
-    
     font-family: Huglove;
     font-weight: bold;
     margin-left: 5rem;
+    float: left;
     color: var(--tipBlueColor);
     padding: 2rem;
     font-size: 64px;
 }
-
 .nav-links{
+    margin-right: 7rem;
+    text-align: right;
+}
+
+.nav-links ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav-links ul li{
+    padding: .5rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+}
+
+.nav-links ul li a{
+    display: block;
+    padding: .5rem;
+    font-size: 18px;
+    font-family: Verdana;
+    text-decoration: none;
+    color: var(--tipBlueColor);
+}
+
+.nav-links ul li ul{
+    display: none;
+    position: absolute;
+    background-color: var(--blueWaterColor);
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-left: -1rem;
+}
+
+.nav-links ul li ul li a{
+    padding: 1rem;
+    font-size: 18px;
+    font-family: Verdana;
+    text-decoration: none;
+    color: var(--tipBlueColor);
+}
+
+/* .nav-links{
     margin-right: 7rem;
     text-align: right;
 }
@@ -101,7 +143,8 @@ header span{
     font-family: Verdana;
     text-decoration: none;
     color: var(--tipBlueColor);
-}
+}  */
+
 .logoPic{
     padding: 12px;
 }
@@ -322,23 +365,6 @@ footer{
     text-align: center;
 }
 
-/* .form-container{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    padding-bottom: 60px;
-    background: #eee;
-}
-
-.form-container form{
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 5px rgb(255, 255, 255);
-    background: #fff;
-    text-align: center;
-
-} */
 
 input{
     margin: 7px 0px;
@@ -386,19 +412,7 @@ input[type=password]{
     border-radius: 5px;
     font-size: 20px;
 }
-/* input[type=button], input[type=submit], input[type=reset] {
-    float: right;
-    background-color: #0f0f0f;
-    border-radius: 25px;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-  } */ 
 
-/* ==================End of Login html====================== */
 
 /* Media Queries */
 

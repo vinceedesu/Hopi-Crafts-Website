@@ -64,7 +64,7 @@
                 <div class="column left">
                     <h1>< Shop ></h1>
                     <p>Order your art and it will be delivered in your front door</p>
-                    <a href="sources\html\shop.html"><button class="click">Visit Shop</button></a>
+                    <a href="sources/php/shop.php"><button class="click">Visit Shop</button></a>
                 </div>
                 <div class="column right">
                     <img class="shop-img" src="sources\img\Line Art\Untitled31_20220421025406.png" alt="#"><br>
@@ -81,6 +81,17 @@
                 </div>
              </div>
 
-<?php
-include_once 'sources/php/footer.php';
-?>
+            <footer>
+                Follow our Socials 
+                <br>
+                <a class="social-links" href="https://www.facebook.com/hopistthpn?mibextid=ZbWKwL"><img src="sources/UI/Fb.png" alt="fbsocial"></a> 
+                <a class="social-links" href="https://www.instagram.com/siencollections.ph/?fbclid=IwAR0bEWjkYTR4nRTim48lXeK_RkkiWl8Q0DQBJRRM35hLGG-Oh3gSlljScIs"><img src="sources/UI/instagram.png" alt="igsocial"></a> 
+                <a class="social-links" href="https://www.facebook.com/hopistthpn?mibextid=ZbWKwL"><img src="sources/UI/twitter.png" alt="twittersocial"></a> 
+                <a class="social-links" href="#"><img src="sources/UI/gmail.png" alt="gmail"></a> 
+                <br>
+                Hopi Crafts 2023 &copy; 
+            </footer>
+        </div>
+    
+</body>
+</html>
