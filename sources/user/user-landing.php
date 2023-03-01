@@ -34,7 +34,7 @@
                         <div class="subMenu">
                             <li><a href="../user/user-profile.php">User Profile</a></li>
                             <li><a href="../user/wishlist.php">Wishlist</a></li>
-                            <li><a href="../../index.php">Logout</a></li>
+                            <li><a href="../php/logout.php">Logout</a></li>
                         </div>
                     </ul>
                 </ul>
@@ -43,6 +43,6 @@
 
 
 <?php
-include 'content.php';
-include 'footer.php';
+include '../php/content.php';
+include '../php/footer.php';
 ?>

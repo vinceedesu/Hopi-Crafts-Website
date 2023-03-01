@@ -1,3 +1,12 @@
+<?php
+
+//session for admin
+include_once('sessions.php');
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
