@@ -9,11 +9,16 @@
     <script src="script.js"></script> 
     <link rel="icon" type="image/png" href="../img/logo.png" sizes="16x16">
     <link rel="stylesheet" href="../../style.css">
+    
 
 
 </head>
 <body>
 
+
+<?php
+ // access only if session is set
+ ?>
     <div class="main">
         <header>
         

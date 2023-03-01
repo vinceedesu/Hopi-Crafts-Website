@@ -8,7 +8,7 @@
     <title>Hopi Crafts</title>
     <script src="script.js"></script> 
     <link rel="stylesheet" href="../../style.css">
-
+    <link rel="stylesheet" href="../css/shop.css">
 
 </head>
 <body>
@@ -19,19 +19,27 @@
             <div class="nav-links"> 
                 <ul>
                     <li><a href="../../index.php">Back</a></li>
-                    <li><a href="login.php">Sign In</a></li>
 
                 </ul>
             </div>
         </header>
             
-            <div class="shop-gallery" id="shop-gallery">
-                <h1>< Shop ></h1>
-                <p>Order your art and it will be delivered in your front door</p>
-                <img class="shop-img" src="../img/Chibi Art/Chibi OC 2_20220718015258(1).png" alt="#"><br>
+        <div class="shop-gallery" id="shop-gallery">
+            <h1>SHOP</h1>
+            <p>Check out what we offer!</p>
+            <img src="../img/Banner.png" alt="1" class="shop-shop">
+        </div>
+
+        <div clss="shop-content">
+            <div class="shop-item">
+                <img src="../img/Shop/1.png" alt="1" class="shop-img">
+                <div class="shop-text">
+                    <h1>Shop Item 1</h1>
+                    <p>Shop Item 1 Description</p>
+                    <p>$10.00</p>
+                    <a href="shop-item.php" class="shop-btn">View Item</a>
             </div>
-
-
+        </div>
 <?php
 
 include_once "footer.php";
