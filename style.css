@@ -555,21 +555,49 @@ input[type=password]{
 	body{
 		overflow-x: hidden;}
 
-	.nav-links{
-		position: absolute;
-		right: -100%;
-		height: 90vh;
-		top: 10vh;
-		background-color: var(--blueWaterColor);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-		transform: translateX(100%);
-		transition: transform 0.5s ease-in-out;
-	}
-    .nav #icon{
-        display: block;
+    .nav-links{
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: var(--blueWaterColor);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+    }
+    .nav-links.open {
+        transform: translateX(0%);
+    }
+        
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 10px;
+        margin-right: 10px;
+    }
+        
+    .bar {
+        width: 30px;
+        height: 5px;
+        background-color: white;
+        margin: 5px 0;
+        transition: transform 0.5s ease-in-out;
+    }
+        
+    .hamburger-menu.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+        
+    .hamburger-menu.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+        
+    .hamburger-menu.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
     }
 }
 
