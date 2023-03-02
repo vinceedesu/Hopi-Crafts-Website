@@ -1,21 +1,5 @@
 <?php
-$host = "localhost";
-$dbname = "hopi_db";
-$username = "root";
-$password = "";
-     
-
-$conn = new PDO("mysql:host=$host;
-                dbname=$dbname", 
-                $username, 
-                $password);
-
-const FETCH_ASSOC = 2;
-
-if (!$conn) {
-    die("Connection error: " . mysqli_connect_error());
-    
-}
+include 'dbh-inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +8,10 @@ if (!$conn) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../img/logo.png" sizes="16x16">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="tables.css">
+    <link rel="stylesheet" href="products.css">
     <title>Order Manager</title>
 </head>
 <body>
@@ -38,10 +26,10 @@ if (!$conn) {
         </ul>
     </div>
 </header>
-
-<div>
-    <h1>Order Manager</h1>
-    <table>
+<h3 class="h3">Order Manager</h3>
+<div class= "table-wrapper">
+    <table class="fl-table">
+        <thead>
         <tr>
             <th>Product Name</th>
             <th>Price</th>
@@ -53,6 +41,7 @@ if (!$conn) {
             <th>Order Date</th>
             <th>Actions</th>
         </tr>
+        </thead>
         <?php
 
             

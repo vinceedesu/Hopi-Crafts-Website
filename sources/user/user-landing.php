@@ -30,15 +30,10 @@
                     <li><a href="#collections">Collections</a></li>
                     <li><a href="#shop">Shop</a></li>
                     <li><a href="#about-us">About Us</a></li>
-                    <li><a href="#">My Profile</a></li>
-                    <ul>
-                        <div class="subMenu">
-                            <li><a href="user-profile.php">User Profile</a></li>
+                    <li><a href="#"><?php echo $_SESSION['name']?></a></li>
                             <li><a href="cart.php">My Cart</a></li>
                             <li><a href="orders.php">My Orders</a></li>
-                            <li><a href="../php/shop.php">Shop</a></li>
                             <li><a href="../php/logout.php">Logout</a></li>
-                        </div>
                     </ul>
                 </ul>
             </div>

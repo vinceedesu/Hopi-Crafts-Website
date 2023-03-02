@@ -10,7 +10,7 @@
     --bgColorDark: #333333;
     --headerColor: #070b09;
     --whiteTextOnDark:rgb(255, 255, 255);
-    
+
     /* Color Palette */
     --grayColorDark: #363738;
     --blueWaterColor: #1D64C2;
@@ -65,7 +65,7 @@ header{
     background-color: var(--blueWaterColor); 
     align-items: center;
     display: flex;
-    position: fixed;
+    position: absolute;
     justify-content: space-between;
     width: 100%;
 }
