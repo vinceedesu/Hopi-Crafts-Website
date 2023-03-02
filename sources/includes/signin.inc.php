@@ -39,12 +39,12 @@ if(isset($_POST['submit'])){
 
             //if user_type is user, redirect to user-landing.php
             if($_SESSION['user_type'] == "user"){
-                header("Location: ../php/user-landing.php");
+                header("Location: ../user/user-landing.php");
                 exit();
             }
             //if user_type is admin, redirect to admin-landing.php
             else if($_SESSION['user_type'] == "admin"){
-                header("Location: ../php/admin-landing.php?login=success");
+                header("Location: ../admin/admin-landing.php");
                 exit();
             }
         }
