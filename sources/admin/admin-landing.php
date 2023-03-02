@@ -35,8 +35,9 @@ include_once('sessions.php');
                     <li><a href="..\php\login.php">Admin</a></li>
                     <ul>
                         <div class="subMenu">
-                            <li><a href="addproducts.php">Dashboard</a></li>
-                            <li><a href="products.php">Products</a></li>
+
+                            <li><a href="addproducts.php">Add Products</a></li>
+                            <li><a href="ordermanager.php">Order Manager</a></li>
                             <li><a href="..\php\logout.php">Logout</a></li>
                         </div>
                 </ul>
