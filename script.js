@@ -45,25 +45,4 @@ validation
     .onSuccess((event) => {
         document.getElementById("signup").submit();
     });
-
-
-/*carousel*/
-    const carouselImages = document.querySelector('slide');
-const prevButton = document.querySelector('.carousel-prev');
-const nextButton = document.querySelector('.carousel-next');
-
-let currentIndex = 0;
-
-function updateCarousel() {
-    carouselImages.style.transform = `translateX(${-currentIndex * (500/3)}px)`;
-}
-
-prevButton.addEventListener('click', () => {
-  currentIndex = Math.max(currentIndex - 1, 0);
-  updateCarousel();
-});
-
-nextButton.addEventListener('click', () => {
-    currentIndex = Math.min(currentIndex + 1, Math.floor(carouselImages.children.length / 3) - 1);
-    updateCarousel();
-});
+    
