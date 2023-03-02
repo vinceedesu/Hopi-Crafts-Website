@@ -32,19 +32,17 @@ include_once('sessions.php');
                     <li><a href="#collections">Collections</a></li>
                     <li><a href="#shop">Shop</a></li>
                     <li><a href="#about-us">About Us</a></li>
-                    <li><a href="..\php\login.php">Admin</a></li>
-                    <ul>
-                        <div class="subMenu">
+                    <li><a href="#"><?php echo $_SESSION['name']?></a></li>
+                    <li><a href="addproducts.php">Add Products</a></li>
+                    <li><a href="ordermanager.php">Order Manager</a></li>
+                    <li><a href="shop.php">Shop Manager</a></li>
+                    <li><a href="..\php\logout.php">Logout</a></li>
 
-                            <li><a href="addproducts.php">Add Products</a></li>
-                            <li><a href="ordermanager.php">Order Manager</a></li>
-                            <li><a href="..\php\logout.php">Logout</a></li>
-                        </div>
                 </ul>
             </div>
         </header>
             
 <?php
-include '../php/content.php';
+include 'content.php';
 include '../php/footer.php';
 ?>
