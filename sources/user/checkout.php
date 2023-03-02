@@ -28,6 +28,9 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../admin/product.css">
+    <link rel="icon" type="image/png" href="../img/logo.png" sizes="16x16">
     <title>Checkout</title>
 </head>
 <body>
@@ -39,27 +42,21 @@ session_start();
             </ul>
         </div>
     </header>
-    <div class="checkout">
-        <div class="text-content">
-            <h1>Checkout</h1>
-            <form  method="post">
-                <label for="name">Name</label>
+    <div class="container">
+ 
+            <form  method="post" class="form-fill">
+                <h3>Checkout</h3>
                 <input type="text" name="name" id="name" value="<?php echo $_SESSION['name']?>" required>
-                <label for="email">Email</label>
                 <input type="email" name="email" id="email" value="<?php echo $_SESSION['email']?>" required>
-                <label for="address">Address</label>
                 <input type="text" name="address" id="address" placeholder="Enter your address" required>
-                <label for="phone">Phone</label>
-                <input type="text" name="phone" id="phone" placeholder="Enter your phone number" required>
-                <label for="payment">Payment</label>
+                <!-- <label for="payment">Payment</label> -->
                 <select name="payment" id="payment" required>
                     <option value="cash">Cash</option>
                     <option value="card">Card</option>
                 </select>
-                <button type="submit" name="checkout">Checkout</button>
+                <input type="submit" name="checkout" value="Checkout" class="btn">
 
             </form>
-        </div>
     </div>
 
     <?php

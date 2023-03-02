@@ -9,10 +9,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../../style.css"> -->
-    <!-- <link rel="stylesheet" href="../css/no-scroll.css">     -->
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../admin/tables.css">   
+    <link rel="stylesheet" href="../css/products.css"> 
     <link rel="icon" type="image/png" href="../img/logo.png" sizes="16x16">
-    <title>Sign In</title>
+    <title>Sign In</title>  
 </head>
 <body>
 
@@ -26,9 +27,10 @@
         </ul>
     </div>
 </header>
-
-<div>
-    <table>
+<h3 class="h3">My Cart</h3>
+<div class = "table-wrapper">
+    <table class="fl-table">
+        <thead>
         <tr>
             <th>Product Name</th>
             <th>Product</th>
@@ -37,6 +39,7 @@
             <th>Total</th>
             <th>Action</th>
         </tr>
+        </thead>
         <tr>
             <?php
             
