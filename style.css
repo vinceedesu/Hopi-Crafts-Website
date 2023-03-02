@@ -80,7 +80,7 @@ header span{
     font-size: 45px;
 }
 .nav-links{
-    margin-right: 6rem;
+    margin-right: 3rem;
     text-align: right;
 }
 
@@ -120,16 +120,6 @@ header span{
     text-decoration: none;
     color: var(--tipBlueColor);
 }
-.nav #icon{
-    color: white;
-    font-size: 30px;
-    line-height: 80px;
-    float: right;
-    margin: 40px;
-    cursor: pointer;
-    display: none;
-}
-
 /* .nav-links{
     margin-right: 7rem;
     text-align: right;
