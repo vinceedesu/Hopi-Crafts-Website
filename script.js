@@ -48,7 +48,7 @@ validation
 
 
 /*carousel*/
-    const carouselImages = document.querySelector('carousel-images');
+    const carouselImages = document.querySelector('slide');
 const prevButton = document.querySelector('.carousel-prev');
 const nextButton = document.querySelector('.carousel-next');
 
