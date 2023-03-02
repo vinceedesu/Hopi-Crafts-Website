@@ -1,16 +1,6 @@
 <?php
 
-// include_once '../includes/dbh-inc.php';
-
-// if(isset($_POST['add_product'])){
-//     $p_name =   $_POST['p_name'];
-//     $p_price =  $_POST['p_price'];
-//     $p_imgage = $_FILES['p_imgage']['name'];
-//     $p_image_folder = "../uploaded_img/".$p_imgage;
-
-
-// }
-
+include '../includes/dbh-inc.php';
 ?>
 
 
@@ -38,13 +28,37 @@
 
         </header>
     <section>
-            <form action="" method="post" class="add-product-form" enctype="multipart/form-data">
+       
+            <form action="" method="post" enctype="multipart/form-data">
                 <h3>add new product</h3>
-                <input type="text" name="p_name" placeholder="enter the product name" class="box" required>
-                <input type="number" name="p_price" placeholder="enter the product price" class="box" required>
-                <input type="file" name="p_imgage" accept="image/png, image/jpg, image/jpeg" class="box" required>
+                <input type="text" name="p_name" placeholder="enter the product name" required>
+                <input type="number" name="p_price" placeholder="enter the product price"  required>
+                <input type="file" name="p_image" accept="image/png, image/jpg, image/jpeg"  required>
                 <input type="submit" name="add_product" value="add product" class="btn">
             </form>
+
+            <?php
+                if(isset($_POST['add_product'])){
+                    $p_name = $_POST['p_name'];
+                    $p_price = $_POST['p_price'];
+                    $p_img = $_FILES['p_image']['name'];
+                    $tardirectory = "../img/uploaded_img/";
+                    $target = $tardirectory . basename($p_img);
+
+                    $insert_product = $conn->prepare("INSERT INTO products (name, price, img_file) VALUES (:name, :price, :img_file)");
+                    $insert_product->execute([
+                        ':name' => $p_name,
+                        ':price' => $p_price,
+                        ':img_file' => $p_img
+                    ]);
+                    if (move_uploaded_file($_FILES["p_image"]["tmp_name"], $target)) {
+                        // echo "The file ". 
+                        htmlspecialchars( basename( $_FILES["p_image"]["name"]));
+                        // . " has been uploaded.";
+                    echo "product added successfully";
+                }
+            }
+            ?>
         </section>
     </div>
 </body>

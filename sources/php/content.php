@@ -20,7 +20,7 @@
                 <div class="column left">
                     <h1>< Shop ></h1>
                     <p>Order your art and it will be delivered in your front door</p>
-                    <a href="..\html\shop.html"><button class="click">Visit Shop</button></a>
+                    <a href="../php/shop.php"><button class="click">Visit Shop</button></a>
                 </div>
                 <div class="column right">
                     <img class="shop-img" src="..\img\Line Art\Untitled31_20220421025406.png" alt="#"><br>

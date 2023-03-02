@@ -17,3 +17,14 @@ if (!$conn) {
     die("Connection error: " . mysqli_connect_error());
     
 }
+
+
+
+session_start();
+
+$id = $_GET['id'];
+//drop the item from cart
+$sql = "DELETE FROM cart WHERE id = $id";
+$result = $conn->query($sql);
+
+header("Location: ../user/cart.php");
