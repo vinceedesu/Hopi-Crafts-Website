@@ -18,6 +18,7 @@
 
 <?php
  // access only if session is set
+ include 'session.php';
  ?>
     <div class="main">
         <header>

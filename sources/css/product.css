@@ -1,0 +1,19 @@
+
+.heading {
+  font-size: 3.5rem;
+  text-align:   center;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: bold;
+  padding-top: 10rem;
+  margin-bottom: 2rem;
+}
+
+.heading h2{
+    font-size: 1200px;
+}
+
+.products .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}

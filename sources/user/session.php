@@ -14,11 +14,6 @@ if(!isset($_SESSION['id'])){
 //check if user is user
 
 if($_SESSION['user_type'] != "user"){
-    header("Location: ../admin/admin-landing.php");
-    exit();
-}
-
-else{
-    header("Location: user-landing.php");
+    header("Location: admin-landing.php");
     exit();
 }

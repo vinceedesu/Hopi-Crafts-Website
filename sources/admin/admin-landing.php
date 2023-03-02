@@ -44,6 +44,6 @@ include_once('sessions.php');
         </header>
             
 <?php
-include 'content.php';
-include 'footer.php';
+include '../php/content.php';
+include '../php/footer.php';
 ?>
