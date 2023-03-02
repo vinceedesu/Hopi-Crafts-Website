@@ -57,15 +57,17 @@
 }
 
 .total h3{
-    font-size: 20px;
+    padding: 1rem;
+    font-size: 29px;
     font-weight: bold;
-    color: #4FC3A1;
+    color: black;
 }
 .checkout a{
+    padding: 1rem;
     font-size: 20px;
     font-weight: bold;
-    color: #4FC3A1;
-    text-decoration: none;
+    color: forestgreen;
+    /* text-decoration: none; */
 }
 
 /* Responsive */

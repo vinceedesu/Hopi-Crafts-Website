@@ -38,7 +38,7 @@ session_start();
         <div class="logo"><span>Hopi Crafts</span></div>
         <div class="nav-links"> 
             <ul>
-                <li><a href="user-landing.php">Back</a></li>
+                <li><a href="cart.php">Back</a></li>
             </ul>
         </div>
     </header>
