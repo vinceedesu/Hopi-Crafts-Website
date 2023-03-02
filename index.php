@@ -27,11 +27,6 @@
                     <li><a href="sources\php\login.php">Sign In</a></li>
                 </ul>
             </div>
-            <div class="hamburger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
         </header>
              <div class="png-carousel" id="home">
                 <h1>< Art Collection for the Month ></h1>
