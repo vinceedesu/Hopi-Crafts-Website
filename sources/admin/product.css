@@ -111,7 +111,13 @@ section{
 }
 
 /* btn hover */
-
+form h3{
+  font-family:hug;
+  font-size: 2.5rem;
+  color:#363738;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
 .btn:hover{
   background-color: #363738;
   transition: .5s;

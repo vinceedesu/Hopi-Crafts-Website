@@ -57,7 +57,7 @@ include '../includes/signin.inc.php';
             <div class="logo"><span>Hopi Crafts</span></div>
             <div class="nav-links"> 
                 <ul>
-                    <li><a href="../../index.php">Back</a></li>
+                    <li><a href="../user/user-landing.php">Back</a></li>
 
                 </ul>
             </div>
@@ -97,5 +97,5 @@ include '../includes/signin.inc.php';
       ?>
 <?php
 
-include_once "footer.php";
+include_once "../php/footer.php";
 ?>

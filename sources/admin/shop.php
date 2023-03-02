@@ -113,7 +113,6 @@ include '../includes/signin.inc.php';
                         ?>
                     </div>
                 </form>
-            </div>
         </div>
         <?php
             };
