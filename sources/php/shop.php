@@ -1,3 +1,41 @@
+<?php
+
+include '../includes/dbh-inc.php';
+include '../includes/signin.inc.php';
+
+?>
+
+<?php
+    if(isset($_POST['add_to_cart'])){
+        $product_name = $_POST['product_name'];
+        $product_price = $_POST['product_price'];
+        $product_img = $_POST['product_img'];
+        $product_quantity =1;
+        $user_email = $_SESSION['email'];
+
+        $select_cart = $conn->prepare("SELECT * FROM `cart` WHERE name = :name");
+        $select_cart->execute([':name' => $product_name]);
+     
+        if($select_cart->rowCount() > 0){
+            
+            $insert_product = $conn->prepare("UPDATE `cart` SET quantity = quantity + 1 WHERE name = :name");
+            $insert_product->execute([':name' => $product_name]);
+            $message[] = 'Product already added to cart';
+            
+        }else{
+           // Prepare and execute the INSERT statement
+            $insert_product = $conn->prepare("INSERT INTO `cart`(name, price, img_file, quantity, user_email) VALUES(?, ?, ?, ?, ?)");
+            $insert_product->execute([$product_name, 
+                                      $product_price, 
+                                      $product_img, 
+                                      $product_quantity,
+                                      $user_email]);
+            $message[] = 'Product added to cart';
+
+        }
+     }
+        
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +56,7 @@
             <div class="logo"><span>Hopi Crafts</span></div>
             <div class="nav-links"> 
                 <ul>
-                    <li><a href="../../index.php">Back</a></li>
+                    <li><a href="../user/user-landing.php">Back</a></li>
 
                 </ul>
             </div>
@@ -30,16 +68,32 @@
             <img src="../img/Banner.png" alt="1" class="shop-shop">
         </div>
 
-        <div clss="shop-content">
-            <div class="shop-item">
-                <img src="../img/Shop/1.png" alt="1" class="shop-img">
-                <div class="shop-text">
-                    <h1>Shop Item 1</h1>
-                    <p>Shop Item 1 Description</p>
-                    <p>$10.00</p>
-                    <a href="shop-item.php" class="shop-btn">View Item</a>
+        <div class='box'>
+                <?php
+                    //select from database products table PDO and fetch
+                    $select_product = $conn->prepare("SELECT * FROM products");
+                    $select_product->execute();
+
+                    //set the resulting array to associative
+                    while($fetch_product = $select_product->fetch(PDO::FETCH_ASSOC)) {
+                    ?>
+
+                <form method="post">
+                    <div class="box-container">
+                        <img src="../img/uploaded_img/<?php echo $fetch_product['img_file']?>"class="img-products">
+                        <h3><?php echo $fetch_product['name']?></h3>
+                        <div class="price">Php<?php echo $fetch_product['price']?></div>
+                        <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']?>">
+                        <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']?>">
+                        <input type="hidden" name="product_img" value="<?php echo $fetch_product['img_file']?>">
+                        <input type="submit" class="btn" value="Add to Cart" name="add_to_cart">
+                    </div>
+                </form>
             </div>
         </div>
+        <?php
+            };
+      ?>
 <?php
 
 include_once "footer.php";

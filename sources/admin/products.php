@@ -1,23 +1,7 @@
 <?php
 
 
-$host = "localhost";
-$dbname = "hopi_db";
-$username = "root";
-$password = "";
-     
-
-$conn = new PDO("mysql:host=$host;
-                dbname=$dbname", 
-                $username, 
-                $password);
-
-const FETCH_ASSOC = 2;
-
-if (!$conn) {
-    die("Connection error: " . mysqli_connect_error());
-    
-}
+include '../includes/dbh-inc.php';
 
 ?>
 
@@ -28,6 +12,7 @@ if (!$conn) {
         $product_quantity = $_POST['product_quantity'];
         $product_img = $_POST['product_img'];
         $product_quantity =1;
+        $user_email= $_SESSION['email'];
 
         $select_cart = $conn->prepare("SELECT * FROM `cart` WHERE name = :name");
         $select_cart->execute([':name' => $product_name]);
@@ -101,10 +86,10 @@ if (!$conn) {
                         <img src="../img/uploaded_img/<?php echo $fetch_product['img_file']?>"class="img-products">
                         <h3><?php echo $fetch_product['name']?></h3>
                         <div class="price">Php<?php echo $fetch_product['price']?></div>
-                        <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']?></h3>">
-                        <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']?></h3>">
-                        <input type="hidden" name="product_img" value="<?php echo $fetch_product['img_file']?></h3>">
-                        <input type="submit" class="btn" value="Add to Wishlist" name="add_to_wishlist">
+                        <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']?>">
+                        <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']?>">
+                        <input type="hidden" name="product_img" value="<?php echo $fetch_product['img_file']?>">
+                        <input type="submit" class="btn" value="Add to Wishlist" name="add_to_cart">
                     </div>
                 </form>
             </div>

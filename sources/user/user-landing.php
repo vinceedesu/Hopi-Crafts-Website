@@ -33,8 +33,10 @@
                     <li><a href="#">My Profile</a></li>
                     <ul>
                         <div class="subMenu">
-                            <li><a href="../user/user-profile.php">User Profile</a></li>
-                            <li><a href="../user/wishlist.php">Wishlist</a></li>
+                            <li><a href="user-profile.php">User Profile</a></li>
+                            <li><a href="cart.php">My Cart</a></li>
+                            <li><a href="orders.php">My Orders</a></li>
+                            <li><a href="../php/shop.php">Shop</a></li>
                             <li><a href="../php/logout.php">Logout</a></li>
                         </div>
                     </ul>
