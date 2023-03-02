@@ -11,11 +11,12 @@ $conn = new PDO("mysql:host=$host;
                 $username, 
                 $password);
 
+const FETCH_ASSOC = 2;
 
 if (!$conn) {
+    echo "not Connected successfully";
     die("Connection error: " . mysqli_connect_error());
+    
 }
 
-
-// else{
-//     echo "Connected successfully";}
+echo "Connected successfully";
