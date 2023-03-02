@@ -3,7 +3,6 @@
 //session for admin
 include_once('sessions.php');
 
-
 ?>
 
 
@@ -33,7 +32,13 @@ include_once('sessions.php');
                     <li><a href="#collections">Collections</a></li>
                     <li><a href="#shop">Shop</a></li>
                     <li><a href="#about-us">About Us</a></li>
-                    <li><a href="sources\php\login.php">Admin</a></li>
+                    <li><a href="..\php\login.php">Admin</a></li>
+                    <ul>
+                        <div class="subMenu">
+                            <li><a href="dashboard.php">Dashboard</a></li>
+                            <li><a href="products.php">Products</a></li>
+                            <li><a href="..\php\logout.php">Logout</a></li>
+                        </div>
                 </ul>
             </div>
         </header>

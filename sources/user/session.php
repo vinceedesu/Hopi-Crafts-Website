@@ -18,14 +18,6 @@ if($_SESSION['user_type'] != "user"){
     exit();
 }
 
-//check if user clicked the logout button
-
-if(isset($_POST['logout'])){
-    session_unset();
-    session_destroy();
-    header("Location: ../php/login.php");
-    exit();
-}
 else{
     header("Location: user-landing.php");
     exit();
