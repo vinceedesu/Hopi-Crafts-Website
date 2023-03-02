@@ -65,7 +65,7 @@ header{
     background-color: var(--blueWaterColor); 
     align-items: center;
     display: flex;
-    position: absolute;
+    position: fixed;
     justify-content: space-between;
     width: 100%;
 }

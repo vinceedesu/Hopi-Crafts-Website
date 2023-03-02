@@ -36,22 +36,14 @@
              <div class="png-carousel" id="home">
                 <h1>< Art Collection for the Month ></h1>
                 <p>They made the Art for the month for a reason</p>
-                <button class="carousel-button prev">&#8656;</button>
-                <button class="carousel-button next">&#8658;</button>
+
                  <ul>
                      <li class="slide">
                          <img class="carousel-img" src="sources\img\Line Art\FA - HJS_20220423014918.png" alt="#">
                          <img class="carousel-img" src="sources/img/Chibi Art/Base 11_20220717232125(1).png" alt="#">
                          <img class="carousel-img" src="sources\img\Line Art\Untitled6_20220406014651.png" alt="#">
                      </li>  
-                 </ul> 
-                 <ul>
-                     <li class="slide2">
-                         <img class="carousel-img" src="sources\img\Crafts\IMG20230121021052.jpg" alt="#">
-                         <img class="carousel-img" src="sources\img\Crafts\IMG_20221224_090250.jpg" alt="#">
-                         <img class="carousel-img" src="sources\img\Crafts\IMG_20220212_211753_684(1).webp" alt="#">
-                     </li> 
-                 </ul>       
+                 </ul>  
  
              </div>
 

@@ -41,6 +41,6 @@
 
 
 <?php
-include '../php/content.php';
+include 'content.php';
 include '../php/footer.php';
 ?>

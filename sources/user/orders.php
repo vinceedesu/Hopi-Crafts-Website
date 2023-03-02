@@ -23,6 +23,10 @@ if (!$conn) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../admin/tables.css">   
+    <link rel="stylesheet" href="../css/products.css"> 
+    <link rel="icon" type="image/png" href="../img/logo.png" sizes="16x16">
     <title>My Orders</title>
 </head>
 <body>
@@ -36,9 +40,10 @@ if (!$conn) {
         </ul>
     </div>
 </header>
-    <h1>My Orders</h1>
-    <div>
-        <table>
+    <h3 class="h3">My Orders</h3>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
             <tr>
                 <th>Name</th>
                 <th>Price</th>
@@ -47,6 +52,7 @@ if (!$conn) {
                 <th>Order Date</th>
                 <th>Actions</th>
             </tr>
+            </thead>
             <?php
                 include 'session.php';
                 $user_email = $_SESSION['email'];

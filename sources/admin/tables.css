@@ -12,7 +12,7 @@
     margin-bottom: 2rem;
     text-transform: uppercase;
     font-family: hug;
-    color: #363738;;
+    color: #363738;
   }
 .table-wrapper{
     margin: 10px 70px 70px;
@@ -54,6 +54,20 @@
 
 .fl-table tr:nth-child(even) {
     background: #F8F8F8;
+}
+
+.total h3{
+    padding: 1rem;
+    font-size: 29px;
+    font-weight: bold;
+    color: black;
+}
+.checkout a{
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+    color: forestgreen;
+    /* text-decoration: none; */
 }
 
 /* Responsive */
