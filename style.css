@@ -352,6 +352,16 @@ footer{
 
 
 /* ==================Login html====================== */
+.products .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+}
+
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+    /* padding-bottom: 5rem; */
+ }
 
 .logIn{
     padding-top: 20%;
