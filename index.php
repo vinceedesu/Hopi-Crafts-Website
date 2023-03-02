@@ -8,7 +8,7 @@
     <title>Hopi Crafts</title>
     <script src="script.js"></script> 
     <link rel="icon" type="image/png" href="sources/img/logo.png" sizes="16x16">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 
 </head>
@@ -97,6 +97,25 @@
                 Hopi Crafts 2023 &copy; 
             </footer>
         </div>
-    
+    <script>
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+        const links = document.querySelectorAll('.nav-links li');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            links.forEach(link => {
+            link.classList.toggle('fade');
+            });
+            hamburger.classList.toggle('open');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            hamburger.classList.remove('open');
+            });
+        });
+    </script>
 </body>
 </html>
